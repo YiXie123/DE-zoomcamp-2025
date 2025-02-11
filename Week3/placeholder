@@ -1,1 +1,10 @@
+SELECT count(*) FROM `skilled-tiger-450623-n7.yellow_taxi_data.yellow_taxi_trip_narr`;
+
+select count(*) FROM `skilled-tiger-450623-n7.yellow_taxi_data.yellow_taxi_trip_narr`
+where fare_amount=0;
+
+SELECT DISTINCT vendorID 
+FROM `skilled-tiger-450623-n7.yellow_taxi_data.yellow_taxi_trip_narr`
+WHERE tpep_dropoff_datetime 
+      BETWEEN TIMESTAMP('2024-03-01') AND TIMESTAMP('2024-03-15');
 
