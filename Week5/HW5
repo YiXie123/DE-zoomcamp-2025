@@ -1,0 +1,2471 @@
+Linux de-zoomcamp 6.1.0-31-cloud-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.128-1 (2025-02-07) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue Feb 11 00:52:33 2025 from 35.235.244.32
+paopao_gangpao@de-zoomcamp:~$ ls
+Anaconda3-2023.09-0-Linux-x86_64.sh
+paopao_gangpao@de-zoomcamp:~$ mkdir spark
+paopao_gangpao@de-zoomcamp:~$ cd spark/
+paopao_gangpao@de-zoomcamp:~/spark$ xcode-select --install
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew install java
+-bash: xcode-select: command not found
+==> Checking for `sudo` access (which may request your password)...
+==> This script will install:
+/home/linuxbrew/.linuxbrew/bin/brew
+/home/linuxbrew/.linuxbrew/share/doc/homebrew
+/home/linuxbrew/.linuxbrew/share/man/man1/brew.1
+/home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
+/home/linuxbrew/.linuxbrew/etc/bash_completion.d/brew
+/home/linuxbrew/.linuxbrew/Homebrew
+==> The following new directories will be created:
+/home/linuxbrew/.linuxbrew/bin
+/home/linuxbrew/.linuxbrew/etc
+/home/linuxbrew/.linuxbrew/include
+/home/linuxbrew/.linuxbrew/lib
+/home/linuxbrew/.linuxbrew/sbin
+/home/linuxbrew/.linuxbrew/share
+/home/linuxbrew/.linuxbrew/var
+/home/linuxbrew/.linuxbrew/opt
+/home/linuxbrew/.linuxbrew/share/zsh
+/home/linuxbrew/.linuxbrew/share/zsh/site-functions
+/home/linuxbrew/.linuxbrew/var/homebrew
+/home/linuxbrew/.linuxbrew/var/homebrew/linked
+/home/linuxbrew/.linuxbrew/Cellar
+/home/linuxbrew/.linuxbrew/Caskroom
+/home/linuxbrew/.linuxbrew/Frameworks
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /usr/bin/install -d -o paopao_gangpao -g paopao_gangpao -m 0755 /home/linuxbrew/.linuxbrew
+==> /usr/bin/sudo /bin/mkdir -p /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var/homebrew /home/linuxbrew/.linuxbrew/var/homebrew/linked /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/Caskroom /home/linuxbrew/.linuxbrew/Frameworks
+==> /usr/bin/sudo /bin/chmod ug=rwx /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var/homebrew /home/linuxbrew/.linuxbrew/var/homebrew/linked /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/Caskroom /home/linuxbrew/.linuxbrew/Frameworks
+==> /usr/bin/sudo /bin/chmod go-w /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions
+==> /usr/bin/sudo /bin/chown paopao_gangpao /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var/homebrew /home/linuxbrew/.linuxbrew/var/homebrew/linked /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/Caskroom /home/linuxbrew/.linuxbrew/Frameworks
+==> /usr/bin/sudo /bin/chgrp paopao_gangpao /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/share/zsh /home/linuxbrew/.linuxbrew/share/zsh/site-functions /home/linuxbrew/.linuxbrew/var/homebrew /home/linuxbrew/.linuxbrew/var/homebrew/linked /home/linuxbrew/.linuxbrew/Cellar /home/linuxbrew/.linuxbrew/Caskroom /home/linuxbrew/.linuxbrew/Frameworks
+==> /usr/bin/sudo /bin/mkdir -p /home/linuxbrew/.linuxbrew/Homebrew
+==> /usr/bin/sudo /bin/chown -R paopao_gangpao:paopao_gangpao /home/linuxbrew/.linuxbrew/Homebrew
+  You must install Git before installing Homebrew. See:
+    https://docs.brew.sh/Installation
+-bash: brew: command not found
+paopao_gangpao@de-zoomcamp:~/spark$ export JAVA_HOME=/usr/local/Cellar/openjdk@11/11.0.12
+export PATH="$JAVA_HOME/bin/:$PATH"
+paopao_gangpao@de-zoomcamp:~/spark$ import pyspark
+from pyspark.sql import SparkSession
+
+!spark-shell --version
+
+# Create SparkSession
+spark = SparkSession.builder.master("local[1]") \
+                    .appName('test-spark') \
+                    .getOrCreate()
+
+print(f'The PySpark {spark.version} version is running...')
+-bash: import: command not found
+-bash: from: command not found
+-bash: !spark: event not found
+-bash: syntax error near unexpected token `('
+-bash: syntax error near unexpected token `'test-spark''
+-bash: syntax error near unexpected token `print'
+paopao_gangpao@de-zoomcamp:~/spark$ brew install scala@2.13
+-bash: brew: command not found
+paopao_gangpao@de-zoomcamp:~/spark$ pip install scala@2.13
+-bash: pip: command not found
+paopao_gangpao@de-zoomcamp:~/spark$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+==> Checking for `sudo` access (which may request your password)...
+==> This script will install:
+/home/linuxbrew/.linuxbrew/bin/brew
+/home/linuxbrew/.linuxbrew/share/doc/homebrew
+/home/linuxbrew/.linuxbrew/share/man/man1/brew.1
+/home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
+/home/linuxbrew/.linuxbrew/etc/bash_completion.d/brew
+/home/linuxbrew/.linuxbrew/Homebrew
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /bin/chown -R paopao_gangpao:paopao_gangpao /home/linuxbrew/.linuxbrew/Homebrew
+  You must install Git before installing Homebrew. See:
+    https://docs.brew.sh/Installation
+paopao_gangpao@de-zoomcamp:~/spark$ brew install scala@2.13
+-bash: brew: command not found
+paopao_gangpao@de-zoomcamp:~/spark$ sudo apt-get update && sudo apt-get install -y git
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:3 file:/etc/apt/mirrors/debian-security.list Mirrorlist [39 B]
+Hit:7 https://packages.cloud.google.com/apt google-compute-engine-bookworm-stable InRelease
+Hit:2 https://deb.debian.org/debian bookworm InRelease      
+Get:8 https://packages.cloud.google.com/apt cloud-sdk-bookworm InRelease [1654 B]
+Get:4 https://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:5 https://deb.debian.org/debian bookworm-backports InRelease [59.0 kB]
+Get:6 https://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:9 https://packages.cloud.google.com/apt cloud-sdk-bookworm/main all Packages [1670 kB]
+Get:10 https://packages.cloud.google.com/apt cloud-sdk-bookworm/main amd64 Packages [3680 kB]
+Get:11 https://deb.debian.org/debian bookworm-backports/main Sources.diff/Index [63.3 kB]
+Get:12 https://deb.debian.org/debian bookworm-backports/main amd64 Packages.diff/Index [63.3 kB]
+Get:13 https://deb.debian.org/debian bookworm-backports/main Translation-en.diff/Index [63.3 kB]
+Get:17 https://deb.debian.org/debian bookworm-backports/main Sources T-2025-03-02-1408.49-F-2025-02-23-2009.55.pdiff [28.9 kB]
+Get:17 https://deb.debian.org/debian bookworm-backports/main Sources T-2025-03-02-1408.49-F-2025-02-23-2009.55.pdiff [28.9 kB]
+Get:18 https://deb.debian.org/debian bookworm-backports/main amd64 Packages T-2025-03-01-2021.13-F-2025-02-23-2009.55.pdiff [32.6 kB]
+Get:18 https://deb.debian.org/debian bookworm-backports/main amd64 Packages T-2025-03-01-2021.13-F-2025-02-23-2009.55.pdiff [32.6 kB]
+Get:19 https://deb.debian.org/debian bookworm-backports/main Translation-en T-2025-03-02-0209.33-F-2025-02-24-2009.23.pdiff [6041 B]
+Get:19 https://deb.debian.org/debian bookworm-backports/main Translation-en T-2025-03-02-0209.33-F-2025-02-24-2009.23.pdiff [6041 B]
+Get:14 https://deb.debian.org/debian-security bookworm-security/main Sources [145 kB]
+Get:15 https://deb.debian.org/debian-security bookworm-security/main amd64 Packages [246 kB]
+Get:16 https://deb.debian.org/debian-security bookworm-security/main Translation-en [147 kB]
+Fetched 6309 kB in 1s (4470 kB/s)                                                                
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  git-man liberror-perl libgdbm-compat4 libperl5.36 patch perl perl-modules-5.36
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn ed
+  diffutils-doc perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl make
+  libtap-harness-archive-perl
+The following NEW packages will be installed:
+  git git-man liberror-perl libgdbm-compat4 libperl5.36 patch perl perl-modules-5.36
+0 upgraded, 8 newly installed, 0 to remove and 10 not upgraded.
+Need to get 16.8 MB of archives.
+After this operation, 97.0 MB of additional disk space will be used.
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 file:/etc/apt/mirrors/debian-security.list Mirrorlist [39 B]
+Get:3 https://deb.debian.org/debian bookworm/main amd64 perl-modules-5.36 all 5.36.0-7+deb12u1 [2815 kB]
+Get:4 https://deb.debian.org/debian bookworm/main amd64 libgdbm-compat4 amd64 1.23-3 [48.2 kB]
+Get:5 https://deb.debian.org/debian bookworm/main amd64 libperl5.36 amd64 5.36.0-7+deb12u1 [4218 kB]
+Get:6 https://deb.debian.org/debian bookworm/main amd64 perl amd64 5.36.0-7+deb12u1 [239 kB]
+Get:7 https://deb.debian.org/debian bookworm/main amd64 liberror-perl all 0.17029-2 [29.0 kB]
+Get:8 https://deb.debian.org/debian bookworm/main amd64 patch amd64 2.7.6-7 [128 kB]
+Get:9 https://deb.debian.org/debian-security bookworm-security/main amd64 git-man all 1:2.39.5-0+deb12u2 [2053 kB]
+Get:10 https://deb.debian.org/debian-security bookworm-security/main amd64 git amd64 1:2.39.5-0+deb12u2 [7260 kB]
+Fetched 16.8 MB in 0s (60.4 MB/s)
+Selecting previously unselected package perl-modules-5.36.
+(Reading database ... 70549 files and directories currently installed.)
+Preparing to unpack .../0-perl-modules-5.36_5.36.0-7+deb12u1_all.deb ...
+Unpacking perl-modules-5.36 (5.36.0-7+deb12u1) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../1-libgdbm-compat4_1.23-3_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.23-3) ...
+Selecting previously unselected package libperl5.36:amd64.
+Preparing to unpack .../2-libperl5.36_5.36.0-7+deb12u1_amd64.deb ...
+Unpacking libperl5.36:amd64 (5.36.0-7+deb12u1) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../3-perl_5.36.0-7+deb12u1_amd64.deb ...
+Unpacking perl (5.36.0-7+deb12u1) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../4-liberror-perl_0.17029-2_all.deb ...
+Unpacking liberror-perl (0.17029-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../5-git-man_1%3a2.39.5-0+deb12u2_all.deb ...
+Unpacking git-man (1:2.39.5-0+deb12u2) ...
+Selecting previously unselected package git.
+Preparing to unpack .../6-git_1%3a2.39.5-0+deb12u2_amd64.deb ...
+Unpacking git (1:2.39.5-0+deb12u2) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../7-patch_2.7.6-7_amd64.deb ...
+Unpacking patch (2.7.6-7) ...
+Setting up perl-modules-5.36 (5.36.0-7+deb12u1) ...
+Setting up patch (2.7.6-7) ...
+Setting up libgdbm-compat4:amd64 (1.23-3) ...
+Setting up git-man (1:2.39.5-0+deb12u2) ...
+Setting up libperl5.36:amd64 (5.36.0-7+deb12u1) ...
+Setting up perl (5.36.0-7+deb12u1) ...
+Setting up liberror-perl (0.17029-2) ...
+Setting up git (1:2.39.5-0+deb12u2) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u9) ...
+paopao_gangpao@de-zoomcamp:~/spark$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+==> Checking for `sudo` access (which may request your password)...
+==> This script will install:
+/home/linuxbrew/.linuxbrew/bin/brew
+/home/linuxbrew/.linuxbrew/share/doc/homebrew
+/home/linuxbrew/.linuxbrew/share/man/man1/brew.1
+/home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew
+/home/linuxbrew/.linuxbrew/etc/bash_completion.d/brew
+/home/linuxbrew/.linuxbrew/Homebrew
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /bin/chown -R paopao_gangpao:paopao_gangpao /home/linuxbrew/.linuxbrew/Homebrew
+==> Downloading and installing Homebrew...
+remote: Enumerating objects: 293775, done.
+remote: Counting objects: 100% (247/247), done.
+remote: Compressing objects: 100% (154/154), done.
+remote: Total 293775 (delta 140), reused 147 (delta 88), pack-reused 293528 (from 3)
+remote: Enumerating objects: 55, done.
+remote: Counting objects: 100% (33/33), done.
+remote: Total 55 (delta 33), reused 33 (delta 33), pack-reused 22 (from 1)
+==> Updating Homebrew...
+==> Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:ece69c4b930308e50187f2df4f909026610a943cefa5e2b5942a327e3ad0d8f8
+######################################################################################################### 100.0%
+==> Pouring portable-ruby-3.3.7.x86_64_linux.bottle.tar.gz
+Warning: /home/linuxbrew/.linuxbrew/bin is not in your PATH.
+  Instructions on how to configure your shell for Homebrew
+  can be found in the 'Next steps' section below.
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (nor will any be during this install run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run these commands in your terminal to add Homebrew to your PATH:
+    echo >> /home/paopao_gangpao/.bashrc
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/paopao_gangpao/.bashrc
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+- Install Homebrew's dependencies if you have sudo access:
+    sudo apt-get install build-essential
+  For more information, see:
+    https://docs.brew.sh/Homebrew-on-Linux
+- We recommend that you install GCC:
+    brew install gcc
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+
+paopao_gangpao@de-zoomcamp:~/spark$ brew install scala@2.13
+-bash: brew: command not found
+paopao_gangpao@de-zoomcamp:~/spark$ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc  # If you use Zsh
+source ~/.bashrc  # Restart your shell or run this to apply changes
+paopao_gangpao@de-zoomcamp:~/spark$ brew install scala@2.13
+==> Downloading https://ghcr.io/v2/homebrew/core/scala/2.13/manifests/2.13.16
+######################################################################################################### 100.0%
+==> Fetching dependencies for scala@2.13: zlib, gmp, isl, mpfr, libmpc, lz4, xz, zstd, binutils, gcc, libpng, bzip2, freetype, giflib, ncurses, readline, libxcrypt, sqlite, util-linux, expat, fontconfig, pcre2, dbus, libffi, mpdecimal, ca-certificates, openssl@3, berkeley-db@5, libedit, unzip, python@3.13, glib, xorgproto, libxau, libxdmcp, libxcb, libx11, libxext, libxrender, lzo, pixman, cairo, graphite2, icu4c@76, harfbuzz, jpeg-turbo, libtiff, little-cms2, alsa-lib, libxfixes, libxi, libxrandr, libice, libsm, libxt, libxtst, krb5, cups, zip and openjdk
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/manifests/1.3.1
+######################################################################################################### 100.0%
+==> Fetching zlib
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/blobs/sha256:38f2469db2ce63b70855a98e5ee27b5b5a92874e52542
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.3.0
+######################################################################################################### 100.0%
+==> Fetching gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/blobs/sha256:3dca3544faca889c7389a5fdbd2b5b00582c34a4e14607
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/manifests/0.27
+######################################################################################################### 100.0%
+==> Fetching isl
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/blobs/sha256:25c8bf618d4e3c68c27eed634bd7695104ff5daa372462
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/manifests/4.2.1
+######################################################################################################### 100.0%
+==> Fetching mpfr
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/blobs/sha256:18857bac44d9f49faeb1d147146ba7fb420d5bf85076f
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/manifests/1.3.1
+######################################################################################################### 100.0%
+==> Fetching libmpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/blobs/sha256:f6542ae5bcf643ca0c980c7000cde1585922e76be08
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/manifests/1.10.0-1
+######################################################################################################### 100.0%
+==> Fetching lz4
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:a8082c2e40dc6d63850f43ea8fa095e55adf18fb0f25ec
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.6.4
+######################################################################################################### 100.0%
+==> Fetching xz
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:c40857ccdacee0eaf8a19a2851f9e4389443da7c10cd6cf
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.7
+######################################################################################################### 100.0%
+==> Fetching zstd
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:4748929efb3666f0fd60451479cb306991c75fc6a8425
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/binutils/manifests/2.44
+######################################################################################################### 100.0%
+==> Fetching binutils
+==> Downloading https://ghcr.io/v2/homebrew/core/binutils/blobs/sha256:0ea2efa458ca43f31bb2ce2588b8c095849e61457
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/manifests/14.2.0_1
+######################################################################################################### 100.0%
+==> Fetching gcc
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:0902085b2185b224dd20c2ee5f12d83284cdbb68d0dab1
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libpng/manifests/1.6.47
+######################################################################################################### 100.0%
+==> Installing libpng dependency: gcc
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/manifests/14.2.0_1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/cece94dbe926093c968a24f66b9a0172afe5cc2ef22253029bc591147237045b--gcc-14.2.0_1.bottle_manifest.json
+==> Installing dependencies for gcc: gmp, isl, mpfr, libmpc, lz4, xz, zlib, zstd and binutils
+==> Installing gcc dependency: gmp
+==> Downloading https://ghcr.io/v2/homebrew/core/gmp/manifests/6.3.0
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/70a72a71216843d66a953c06ff6337445ce9bc94fae9f0e301e2f59005274a8e--gmp-6.3.0.bottle_manifest.json
+==> Pouring gmp--6.3.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gmp/6.3.0: 24 files, 3.9MB
+==> Installing gcc dependency: isl
+==> Downloading https://ghcr.io/v2/homebrew/core/isl/manifests/0.27
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/40b1c5526f95db33208143fa79887179e758121659d8877597f553e6e6188879--isl-0.27.bottle_manifest.json
+==> Pouring isl--0.27.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/isl/0.27: 75 files, 9.9MB
+==> Installing gcc dependency: mpfr
+==> Downloading https://ghcr.io/v2/homebrew/core/mpfr/manifests/4.2.1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/a2a3424f4974f6febfa0334a93f35f508eaef3f4ad04320f73d9498302295635--mpfr-4.2.1.bottle_manifest.json
+==> Pouring mpfr--4.2.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/mpfr/4.2.1: 32 files, 3.9MB
+==> Installing gcc dependency: libmpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libmpc/manifests/1.3.1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/fdfa98e0f8bb3ce075cb32776ac2345aa2f89252706c162aecfc841085fa76be--libmpc-1.3.1.bottle_manifest.json
+==> Pouring libmpc--1.3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libmpc/1.3.1: 14 files, 642.9KB
+==> Installing gcc dependency: lz4
+==> Downloading https://ghcr.io/v2/homebrew/core/lz4/manifests/1.10.0-1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/8e11e90eb21a06e0f199af9d80e011e3693c77dd353b2477579d95c8471a5802--lz4-1.10.0-1.bottle_manifest.json
+==> Pouring lz4--1.10.0.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/lz4/1.10.0: 24 files, 798.7KB
+==> Installing gcc dependency: xz
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.6.4
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/d14e84095418591f4112922f1a834dbac6c7e4fdc334eae0aaff35e2b860cc5b--xz-5.6.4.bottle_manifest.json
+==> Pouring xz--5.6.4.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/xz/5.6.4: 97 files, 2MB
+==> Installing gcc dependency: zlib
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/manifests/1.3.1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/f68d0caf232d52f2aa586abefbbfd7e958e384d84f3967008fa83de94b5f10ae--zlib-1.3.1.bottle_manifest.json
+==> Pouring zlib--1.3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/zlib/1.3.1: 14 files, 476KB
+==> Installing gcc dependency: zstd
+==> Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.7
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/596a67b1677f62a8e24e6fdfa7c879891221cb8261242f4355fb4deff1a2ec39--zstd-1.5.7.bottle_manifest.json
+==> Pouring zstd--1.5.7.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/zstd/1.5.7: 32 files, 2.9MB
+==> Installing gcc dependency: binutils
+==> Downloading https://ghcr.io/v2/homebrew/core/binutils/manifests/2.44
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/8dec3c476e7ac40bbb8a32ba3c2bc58546b09de0fb300ffe32425e1100f62285--binutils-2.44.bottle_manifest.json
+==> Pouring binutils--2.44.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/binutils/2.44: 6,462 files, 392.8MB
+==> Installing gcc
+==> Pouring gcc--14.2.0_1.x86_64_linux.bottle.tar.gz
+Warning: The post-install step did not complete successfully
+You can try again using:
+  brew postinstall gcc
+==> Summary
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gcc/14.2.0_1: 2,095 files, 550.9MB
+==> Fetching libpng
+==> Downloading https://ghcr.io/v2/homebrew/core/libpng/blobs/sha256:8593cf808ca5ac81c78627bec4bae8f761fdd4f773a
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/bzip2/manifests/1.0.8-2
+######################################################################################################### 100.0%
+==> Fetching bzip2
+==> Downloading https://ghcr.io/v2/homebrew/core/bzip2/blobs/sha256:a731afa70daaafec28359b4f10f1c68455c1955ae66c
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/freetype/manifests/2.13.3
+######################################################################################################### 100.0%
+==> Fetching freetype
+==> Downloading https://ghcr.io/v2/homebrew/core/freetype/blobs/sha256:4d847168ffbda85c4470d7599436263b0fd862368
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/giflib/manifests/5.2.2
+######################################################################################################### 100.0%
+==> Fetching giflib
+==> Downloading https://ghcr.io/v2/homebrew/core/giflib/blobs/sha256:db5d2754722a81e5a842a66236aeebe889ebae26b08
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/manifests/6.5
+######################################################################################################### 100.0%
+==> Fetching ncurses
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/blobs/sha256:7c49662d0f319baec24475d38210b2f9c754b2ec1d
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/manifests/8.2.13
+######################################################################################################### 100.0%
+==> Fetching readline
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/blobs/sha256:099378b496dd58f6a0fdb09e4c32d2ccae5631c0b
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/manifests/4.4.38
+######################################################################################################### 100.0%
+==> Fetching libxcrypt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/blobs/sha256:d1835a4d7d45333637814fbd4d0184d6ebdb81b2
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/manifests/3.49.1
+######################################################################################################### 100.0%
+==> Fetching sqlite
+==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:988cd498cfd373e932dadd1893ef46b8b2ef11cdb12
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/util-linux/manifests/2.40.4
+######################################################################################################### 100.0%
+==> Fetching util-linux
+==> Downloading https://ghcr.io/v2/homebrew/core/util-linux/blobs/sha256:5472eb4abe7ce0d30ff3548dda8da1edab2adc4
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/manifests/2.6.4
+######################################################################################################### 100.0%
+==> Fetching expat
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/blobs/sha256:d426857dc98acacb3a4c3bb6d7646dadf65bb4c154a4
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/fontconfig/manifests/2.16.0
+######################################################################################################### 100.0%
+==> Fetching fontconfig
+==> Downloading https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:040b8c1ce9fd3d3022f26e1400b19b757cfd993
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/pcre2/manifests/10.44
+######################################################################################################### 100.0%
+==> Fetching pcre2
+==> Downloading https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:cbddfbb9921fa2894640db7f0395ea8a79ce5209ebe5
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/dbus/manifests/1.14.10
+######################################################################################################### 100.0%
+==> Fetching dbus
+==> Downloading https://ghcr.io/v2/homebrew/core/dbus/blobs/sha256:9037402e48fc19b05f8b621e0e32efa3b4214513f0b47
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/manifests/3.4.7
+######################################################################################################### 100.0%
+==> Fetching libffi
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/blobs/sha256:ea07199765ba473ae2b693aea558e8865a60358ccc1
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/manifests/4.0.0-1
+######################################################################################################### 100.0%
+==> Fetching mpdecimal
+==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/blobs/sha256:ca79318fa094531bd57b3f07d5b8574cd9986bac
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2025-02-25
+######################################################################################################### 100.0%
+==> Fetching ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:8f46fb05f753f80f2bc398c0a24b10d680
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.4.1
+######################################################################################################### 100.0%
+==> Fetching openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:20b1224cb30bb533be177f061b7c1aab4571b04c
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/manifests/5.3.28_1
+######################################################################################################### 100.0%
+==> Fetching berkeley-db@5
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/blobs/sha256:c0e2906cc6657dc497fec75629560b0a404b
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libedit/manifests/20250104-3.1
+######################################################################################################### 100.0%
+==> Fetching libedit
+==> Downloading https://ghcr.io/v2/homebrew/core/libedit/blobs/sha256:3de065ef66904f7758361d623fc96cbc5226663d91
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/unzip/manifests/6.0_8
+######################################################################################################### 100.0%
+==> Fetching unzip
+==> Downloading https://ghcr.io/v2/homebrew/core/unzip/blobs/sha256:baf15e19852a0f9756e3302fa6f3866eaeccc06730c9
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.13/manifests/3.13.2
+######################################################################################################### 100.0%
+==> Fetching python@3.13
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.13/blobs/sha256:1d36bb0df2bf2fee8f000459fdbfdf74ac33c6
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/glib/manifests/2.82.5
+######################################################################################################### 100.0%
+==> Fetching glib
+==> Downloading https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:0db74b4ee32118ea223445f654487ca4b1349535e35be
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/xorgproto/manifests/2024.1
+######################################################################################################### 100.0%
+==> Fetching xorgproto
+==> Downloading https://ghcr.io/v2/homebrew/core/xorgproto/blobs/sha256:fc1ef8db0fe244a7a47541fe8494131a281814a4
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxau/manifests/1.0.12
+######################################################################################################### 100.0%
+==> Fetching libxau
+==> Downloading https://ghcr.io/v2/homebrew/core/libxau/blobs/sha256:eaab2aad3bf7abb8cf6f1b164cd6648731814a71b1b
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxdmcp/manifests/1.1.5
+######################################################################################################### 100.0%
+==> Fetching libxdmcp
+==> Downloading https://ghcr.io/v2/homebrew/core/libxdmcp/blobs/sha256:d8b9dc2969e85e26c6d426d8865244e1416d73f7f
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcb/manifests/1.17.0-1
+######################################################################################################### 100.0%
+==> Fetching libxcb
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcb/blobs/sha256:1ccb2f6e9f4feb73b3dbc56248554bc8ce30cb34771
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libx11/manifests/1.8.11
+######################################################################################################### 100.0%
+==> Fetching libx11
+==> Downloading https://ghcr.io/v2/homebrew/core/libx11/blobs/sha256:89c0d132797463adc612aa6af445f50e0b07c0314ab
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxext/manifests/1.3.6
+######################################################################################################### 100.0%
+==> Fetching libxext
+==> Downloading https://ghcr.io/v2/homebrew/core/libxext/blobs/sha256:c62be32e864f64fc9ed3392a2f6eae085350c5b929
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxrender/manifests/0.9.12
+######################################################################################################### 100.0%
+==> Fetching libxrender
+==> Downloading https://ghcr.io/v2/homebrew/core/libxrender/blobs/sha256:44bddde0557643e137ddd5aa00d60bf22052771
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/lzo/manifests/2.10
+######################################################################################################### 100.0%
+==> Fetching lzo
+==> Downloading https://ghcr.io/v2/homebrew/core/lzo/blobs/sha256:8413f94bb69f337f7e1837e7f525e703cac105d27ceeb2
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/pixman/manifests/0.44.2
+######################################################################################################### 100.0%
+==> Fetching pixman
+==> Downloading https://ghcr.io/v2/homebrew/core/pixman/blobs/sha256:6825da7bb96ac0019357cc7425c98ec6e578642c06c
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/cairo/manifests/1.18.2
+######################################################################################################### 100.0%
+==> Fetching cairo
+==> Downloading https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:8ed937d16eca80e5acbf0b3ae533f933e2d30915abaa
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/graphite2/manifests/1.3.14
+######################################################################################################### 100.0%
+==> Fetching graphite2
+==> Downloading https://ghcr.io/v2/homebrew/core/graphite2/blobs/sha256:0e811b079268bc99d1b6253fc0c979e76325e91e
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/76/manifests/76.1_1
+######################################################################################################### 100.0%
+==> Fetching icu4c@76
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/76/blobs/sha256:e371567ddebb72c0aac6143d10bc47d6f0e0ed87a
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/harfbuzz/manifests/10.4.0
+######################################################################################################### 100.0%
+==> Fetching harfbuzz
+==> Downloading https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:d54b29388e61e7247401c1c24436aa58b1a5f15bb
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/jpeg-turbo/manifests/3.1.0
+######################################################################################################### 100.0%
+==> Fetching jpeg-turbo
+==> Downloading https://ghcr.io/v2/homebrew/core/jpeg-turbo/blobs/sha256:87e49b8d9e91e96ab8a404ab29746f5705c2040
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libtiff/manifests/4.7.0-1
+######################################################################################################### 100.0%
+==> Fetching libtiff
+==> Downloading https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:e873d7ab4e4159cd3ee973a2ec9cf7530fa3679abb
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/little-cms2/manifests/2.17
+######################################################################################################### 100.0%
+==> Fetching little-cms2
+==> Downloading https://ghcr.io/v2/homebrew/core/little-cms2/blobs/sha256:667006576a5da32e7984c0c310cba11d63970e
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/alsa-lib/manifests/1.2.13
+######################################################################################################### 100.0%
+==> Fetching alsa-lib
+==> Downloading https://ghcr.io/v2/homebrew/core/alsa-lib/blobs/sha256:b5401dcbbfabbbc67667e8c34eead4678555c0c14
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxfixes/manifests/6.0.1
+######################################################################################################### 100.0%
+==> Fetching libxfixes
+==> Downloading https://ghcr.io/v2/homebrew/core/libxfixes/blobs/sha256:dd98561e1f625057b34be07c81541d7759f29756
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxi/manifests/1.8.2
+######################################################################################################### 100.0%
+==> Fetching libxi
+==> Downloading https://ghcr.io/v2/homebrew/core/libxi/blobs/sha256:6839d93e4dc8d53688515849ec4ec2d830946d6d26f6
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxrandr/manifests/1.5.4
+######################################################################################################### 100.0%
+==> Fetching libxrandr
+==> Downloading https://ghcr.io/v2/homebrew/core/libxrandr/blobs/sha256:c48b622aed3d5e99e225601dca2d129fda085855
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libice/manifests/1.1.2
+######################################################################################################### 100.0%
+==> Fetching libice
+==> Downloading https://ghcr.io/v2/homebrew/core/libice/blobs/sha256:b4031d0484219c9a701184de11ae283694a3e1067a0
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libsm/manifests/1.2.5
+######################################################################################################### 100.0%
+==> Fetching libsm
+==> Downloading https://ghcr.io/v2/homebrew/core/libsm/blobs/sha256:dfe133929dc73f2b9f23eaa8422a6083c623d14a9d07
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxt/manifests/1.3.1
+######################################################################################################### 100.0%
+==> Fetching libxt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxt/blobs/sha256:9b0de9305b6428a6ffca0a8bdb1a777ed01bf9a31cfb
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxtst/manifests/1.2.5
+######################################################################################################### 100.0%
+==> Fetching libxtst
+==> Downloading https://ghcr.io/v2/homebrew/core/libxtst/blobs/sha256:51cacd4573d0d4e1cc33c83574cf4838d93de28276
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/krb5/manifests/1.21.3
+######################################################################################################### 100.0%
+==> Fetching krb5
+==> Downloading https://ghcr.io/v2/homebrew/core/krb5/blobs/sha256:f5b4cafedb315e92a31a0a5d87e33f7826952bcc5c093
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/cups/manifests/2.4.11
+######################################################################################################### 100.0%
+==> Fetching cups
+==> Downloading https://ghcr.io/v2/homebrew/core/cups/blobs/sha256:450c1b750daf7df268f6107c5bd585c9a1d20fe20914f
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/zip/manifests/3.0-2
+######################################################################################################### 100.0%
+==> Fetching zip
+==> Downloading https://ghcr.io/v2/homebrew/core/zip/blobs/sha256:ce503e630831ea12bb87e28c2668a185cb12a94680f4f4
+######################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/manifests/23.0.2
+######################################################################################################### 100.0%
+==> Fetching openjdk
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:a7bd3a62568d49149d566ed5cf98ec8a5cd2ab1300
+######################################################################################################### 100.0%
+==> Installing scala@2.13 dependency: gcc
+==> Downloading https://ghcr.io/v2/homebrew/core/gcc/manifests/14.2.0_1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/cece94dbe926093c968a24f66b9a0172afe5cc2ef22253029bc591147237045b--gcc-14.2.0_1.bottle_manifest.json
+==> Pouring gcc--14.2.0_1.x86_64_linux.bottle.tar.gz
+Warning: The post-install step did not complete successfully
+You can try again using:
+  brew postinstall gcc
+==> Summary
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gcc/14.2.0_1: 2,095 files, 550.9MB
+==> Fetching scala@2.13
+==> Downloading https://ghcr.io/v2/homebrew/core/scala/2.13/blobs/sha256:7095101fa3ff5a8bef712c14a3fde138274e276
+######################################################################################################### 100.0%
+==> Installing dependencies for scala@2.13: libpng, bzip2, freetype, giflib, ncurses, readline, libxcrypt, sqlite, util-linux, expat, fontconfig, pcre2, dbus, libffi, mpdecimal, ca-certificates, openssl@3, berkeley-db@5, libedit, unzip, python@3.13, glib, xorgproto, libxau, libxdmcp, libxcb, libx11, libxext, libxrender, lzo, pixman, cairo, graphite2, icu4c@76, harfbuzz, jpeg-turbo, libtiff, little-cms2, alsa-lib, libxfixes, libxi, libxrandr, libice, libsm, libxt, libxtst, krb5, cups, zip and openjdk
+==> Installing scala@2.13 dependency: libpng
+==> Downloading https://ghcr.io/v2/homebrew/core/libpng/manifests/1.6.47
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/072d8f136f69cf75140ffb8a832f60b362a14dba897d78ed7fc83e3ca30b2ede--libpng-1.6.47.bottle_manifest.json
+==> Pouring libpng--1.6.47.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libpng/1.6.47: 29 files, 1.5MB
+==> Installing scala@2.13 dependency: bzip2
+==> Downloading https://ghcr.io/v2/homebrew/core/bzip2/manifests/1.0.8-2
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/c1a79a32cc9082c99fc318e6b2596b8b1f6e99abacb32bcbe88f979e4be5e4ea--bzip2-1.0.8-2.bottle_manifest.json
+==> Pouring bzip2--1.0.8.x86_64_linux.bottle.2.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/bzip2/1.0.8: 32 files, 607.5KB
+==> Installing scala@2.13 dependency: freetype
+==> Downloading https://ghcr.io/v2/homebrew/core/freetype/manifests/2.13.3
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/4c4d14d574a7af9a5a0220cd5012c698bd87b75a3d5e39a6a6c34b4c411aab52--freetype-2.13.3.bottle_manifest.json
+==> Pouring freetype--2.13.3.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/freetype/2.13.3: 69 files, 3.0MB
+==> Installing scala@2.13 dependency: giflib
+==> Downloading https://ghcr.io/v2/homebrew/core/giflib/manifests/5.2.2
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/283773c4d2db4fe867419d7eea6811a6417889d78fad8871041c07f49b22d2a1--giflib-5.2.2.bottle_manifest.json
+==> Pouring giflib--5.2.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/giflib/5.2.2: 27 files, 574.0KB
+==> Installing scala@2.13 dependency: ncurses
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/manifests/6.5
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/b2f8ce4e08b15832435170efd265346225ee388d5baab3d5c50e3a77c5673b5a--ncurses-6.5.bottle_manifest.json
+==> Pouring ncurses--6.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ncurses/6.5: 4,037 files, 10.9MB
+==> Installing scala@2.13 dependency: readline
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/manifests/8.2.13
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/aa1afa38997a2866d91c81fdda8b36d436cd4ea7a82aed07d13c83c56eb3460e--readline-8.2.13.bottle_manifest.json
+==> Pouring readline--8.2.13.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/readline/8.2.13: 51 files, 2MB
+==> Installing scala@2.13 dependency: libxcrypt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/manifests/4.4.38
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/dd32c4ad3dd310fa48e28a08ef353c651cfb65a327303d7684835f21a85a7a34--libxcrypt-4.4.38.bottle_manifest.json
+==> Pouring libxcrypt--4.4.38.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxcrypt/4.4.38: 25 files, 373.3KB
+==> Installing scala@2.13 dependency: sqlite
+==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/manifests/3.49.1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/ce3cf24bf33f0eff2d169e046ba5da3ec75ab9fe0439e7b7face44f42e033fcb--sqlite-3.49.1.bottle_manifest.json
+==> Pouring sqlite--3.49.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/sqlite/3.49.1: 13 files, 6MB
+==> Installing scala@2.13 dependency: util-linux
+==> Downloading https://ghcr.io/v2/homebrew/core/util-linux/manifests/2.40.4
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/50d04b96178d21743010177c1318789d82f73a4a47fcd28bcce6367047c5f5be--util-linux-2.40.4.bottle_manifest.json
+==> Pouring util-linux--2.40.4.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/util-linux/2.40.4: 443 files, 26MB
+==> Installing scala@2.13 dependency: expat
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/manifests/2.6.4
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/700d5fdfe27a60378ec5801ebcbf598a7f6eeb78be73ddb517b205e6692b42d6--expat-2.6.4.bottle_manifest.json
+==> Pouring expat--2.6.4.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/expat/2.6.4: 23 files, 907.8KB
+==> Installing scala@2.13 dependency: fontconfig
+==> Downloading https://ghcr.io/v2/homebrew/core/fontconfig/manifests/2.16.0
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/6897fed6b85e0f537cb8774ec21346308111caaf26c136f33fdc95302d361fe7--fontconfig-2.16.0.bottle_manifest.json
+==> Pouring fontconfig--2.16.0.x86_64_linux.bottle.tar.gz
+==> Regenerating font cache, this may take a while
+==> /home/linuxbrew/.linuxbrew/Cellar/fontconfig/2.16.0/bin/fc-cache -frv
+🍺  /home/linuxbrew/.linuxbrew/Cellar/fontconfig/2.16.0: 97 files, 1.7MB
+==> Installing scala@2.13 dependency: pcre2
+==> Downloading https://ghcr.io/v2/homebrew/core/pcre2/manifests/10.44
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/22ed791461c5bf400adde8c3b432c1230866aa1db3c5cb81e06a6ff21cac96ee--pcre2-10.44.bottle_manifest.json
+==> Pouring pcre2--10.44.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/pcre2/10.44: 241 files, 7.3MB
+==> Installing scala@2.13 dependency: dbus
+==> Downloading https://ghcr.io/v2/homebrew/core/dbus/manifests/1.14.10
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/2dee97539c09d15349d9935f14c299bce3e52d11fd6d399a05a5190d0e7a1028--dbus-1.14.10.bottle_manifest.json
+==> Pouring dbus--1.14.10.x86_64_linux.bottle.tar.gz
+==> /home/linuxbrew/.linuxbrew/Cellar/dbus/1.14.10/bin/dbus-uuidgen --ensure=/home/linuxbrew/.linuxbrew/var/lib/
+🍺  /home/linuxbrew/.linuxbrew/Cellar/dbus/1.14.10: 78 files, 3.0MB
+==> Installing scala@2.13 dependency: libffi
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/manifests/3.4.7
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/0dbccb1792291b90549d4a508e1f8609410e50e9229ae89b6f303e9a93445c50--libffi-3.4.7.bottle_manifest.json
+==> Pouring libffi--3.4.7.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libffi/3.4.7: 19 files, 785.5KB
+==> Installing scala@2.13 dependency: mpdecimal
+==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/manifests/4.0.0-1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/7b63c3b34bee402290af49fac829a6682ab45ea5c9258b6fe03b590a03a4c4a9--mpdecimal-4.0.0-1.bottle_manifest.json
+==> Pouring mpdecimal--4.0.0.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/mpdecimal/4.0.0: 22 files, 802KB
+==> Installing scala@2.13 dependency: ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2025-02-25
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/6c1debb525d4dc6007afae4cd2b772105111632b22fc28506550f6dfe27c6d52--ca-certificates-2025-02-25.bottle_manifest.json
+==> Pouring ca-certificates--2025-02-25.all.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ca-certificates/2025-02-25: 4 files, 251.4KB
+==> Installing scala@2.13 dependency: openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.4.1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/a2bb8b71ebddb1fe8553581fcbc1ffc4ab36795c68b3cd47977cf83f1673a5b1--openssl@3-3.4.1.bottle_manifest.json
+==> Pouring openssl@3--3.4.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/openssl@3/3.4.1: 7,246 files, 40MB
+==> Installing scala@2.13 dependency: berkeley-db@5
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/manifests/5.3.28_1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/17e4e0def00184b561c8a490b5c0813a7c4f5e1365eb2e927570786eb4e05e09--berkeley-db@5-5.3.28_1.bottle_manifest.json
+==> Pouring berkeley-db@5--5.3.28_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/berkeley-db@5/5.3.28_1: 5,272 files, 87.7MB
+==> Installing scala@2.13 dependency: libedit
+==> Downloading https://ghcr.io/v2/homebrew/core/libedit/manifests/20250104-3.1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/c47389791b85fce1d3f55d8913ff7a87524d458cd8a4bc1cf6f9c0093da6783a--libedit-20250104-3.1.bottle_manifest.json
+==> Pouring libedit--20250104-3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libedit/20250104-3.1: 55 files, 795.7KB
+==> Installing scala@2.13 dependency: unzip
+==> Downloading https://ghcr.io/v2/homebrew/core/unzip/manifests/6.0_8
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/b9a98c1a65dea38eb0bb5d9106a5758ed0ff17635811bd7f7cd6be5908c2961b--unzip-6.0_8.bottle_manifest.json
+==> Pouring unzip--6.0_8.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/unzip/6.0_8: 17 files, 437.9KB
+==> Installing scala@2.13 dependency: python@3.13
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.13/manifests/3.13.2
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/ed88e7b3fd6fee101e6c569740db52ea7364a7e3d9092a35d8375795a39c2592--python@3.13-3.13.2.bottle_manifest.json
+==> Pouring python@3.13--3.13.2.x86_64_linux.bottle.tar.gz
+==> /home/linuxbrew/.linuxbrew/Cellar/python@3.13/3.13.2/bin/python3.13 -Im ensurepip
+==> /home/linuxbrew/.linuxbrew/Cellar/python@3.13/3.13.2/bin/python3.13 -Im pip install -v --no-index --upgrade 
+🍺  /home/linuxbrew/.linuxbrew/Cellar/python@3.13/3.13.2: 2,828 files, 69.8MB
+==> Installing scala@2.13 dependency: glib
+==> Downloading https://ghcr.io/v2/homebrew/core/glib/manifests/2.82.5
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/13279fde2e70b004c1e3429f26949a17f260ab4261ac6c9910d83d781d40aeee--glib-2.82.5.bottle_manifest.json
+==> Pouring glib--2.82.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/glib/2.82.5: 512 files, 40.7MB
+==> Installing scala@2.13 dependency: xorgproto
+==> Downloading https://ghcr.io/v2/homebrew/core/xorgproto/manifests/2024.1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/d89d69340366d1d015e7214520f64081e2d82d7955fb28c6ea5f6539dcb610b2--xorgproto-2024.1.bottle_manifest.json
+==> Pouring xorgproto--2024.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/xorgproto/2024.1: 268 files, 4MB
+==> Installing scala@2.13 dependency: libxau
+==> Downloading https://ghcr.io/v2/homebrew/core/libxau/manifests/1.0.12
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/6335be202d59f96fdee2e4a02f93d8ee87dfcfdbaa4ed132b8fe8c3e3651e27c--libxau-1.0.12.bottle_manifest.json
+==> Pouring libxau--1.0.12.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxau/1.0.12: 22 files, 161.6KB
+==> Installing scala@2.13 dependency: libxdmcp
+==> Downloading https://ghcr.io/v2/homebrew/core/libxdmcp/manifests/1.1.5
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/8713e53f73d0be64780dbea522b0ee07027e6cc7828ff1a4fa0a6596f14cfe25--libxdmcp-1.1.5.bottle_manifest.json
+==> Pouring libxdmcp--1.1.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxdmcp/1.1.5: 13 files, 164.3KB
+==> Installing scala@2.13 dependency: libxcb
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcb/manifests/1.17.0-1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/a17e9d0e04a0013a5be592875b012c409023664b3df084b8051766331d213ff5--libxcb-1.17.0-1.bottle_manifest.json
+==> Pouring libxcb--1.17.0.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxcb/1.17.0: 2,498 files, 7.0MB
+==> Installing scala@2.13 dependency: libx11
+==> Downloading https://ghcr.io/v2/homebrew/core/libx11/manifests/1.8.11
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/892d2a9a8a3fc139f37fcd1a9a1cc6e112a48ed4a33da24e4ea5d3b0046436d3--libx11-1.8.11.bottle_manifest.json
+==> Pouring libx11--1.8.11.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libx11/1.8.11: 1,050 files, 8MB
+==> Installing scala@2.13 dependency: libxext
+==> Downloading https://ghcr.io/v2/homebrew/core/libxext/manifests/1.3.6
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/fedb843acbfcf682fb451396914bfc096f9ea2748376d4c43ce2af7ce1b766b7--libxext-1.3.6.bottle_manifest.json
+==> Pouring libxext--1.3.6.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxext/1.3.6: 89 files, 530.9KB
+==> Installing scala@2.13 dependency: libxrender
+==> Downloading https://ghcr.io/v2/homebrew/core/libxrender/manifests/0.9.12
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/152fb22ff88a23b62841dcfa14aac21018e1d736c072d732185f6139ef922e1c--libxrender-0.9.12.bottle_manifest.json
+==> Pouring libxrender--0.9.12.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxrender/0.9.12: 14 files, 269.5KB
+==> Installing scala@2.13 dependency: lzo
+==> Downloading https://ghcr.io/v2/homebrew/core/lzo/manifests/2.10
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/d4aa5b0c239912c53bc857d1012c6b7feb4acb509618f5e100f95bf8521f08e7--lzo-2.10.bottle_manifest.json
+==> Pouring lzo--2.10.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/lzo/2.10: 33 files, 702.4KB
+==> Installing scala@2.13 dependency: pixman
+==> Downloading https://ghcr.io/v2/homebrew/core/pixman/manifests/0.44.2
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/710d020ae0348db5aff5d6dbdfd222dca000e630d64e8dcd5f8a8499e8131681--pixman-0.44.2.bottle_manifest.json
+==> Pouring pixman--0.44.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/pixman/0.44.2: 11 files, 818.3KB
+==> Installing scala@2.13 dependency: cairo
+==> Downloading https://ghcr.io/v2/homebrew/core/cairo/manifests/1.18.2
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/9d3ab10478bcceef6fbed69d1a4f387b5d996a592bb1ccbf33e560e3d2d5e103--cairo-1.18.2.bottle_manifest.json
+==> Pouring cairo--1.18.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/cairo/1.18.2: 51 files, 2.5MB
+==> Installing scala@2.13 dependency: graphite2
+==> Downloading https://ghcr.io/v2/homebrew/core/graphite2/manifests/1.3.14
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/bbb4dd2ef1846301d1eb08053e19e11ca9c780f93f4d3b2d638fd94a9bf54a0c--graphite2-1.3.14.bottle_manifest.json
+==> Pouring graphite2--1.3.14.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/graphite2/1.3.14: 19 files, 341.5KB
+==> Installing scala@2.13 dependency: icu4c@76
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/76/manifests/76.1_1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/c105f8980d3a6b0ff0253b47492e886520580406ee75fa52509cf5b251b4d633--icu4c@76-76.1_1.bottle_manifest.json
+==> Pouring icu4c@76--76.1_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/icu4c@76/76.1_1: 277 files, 88.7MB
+==> Installing scala@2.13 dependency: harfbuzz
+==> Downloading https://ghcr.io/v2/homebrew/core/harfbuzz/manifests/10.4.0
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/b7209e28b6339dd7642dda11883c4a5c99facd09fba5dd584fe5517b74ae9d6e--harfbuzz-10.4.0.bottle_manifest.json
+==> Pouring harfbuzz--10.4.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/harfbuzz/10.4.0: 81 files, 11.7MB
+==> Installing scala@2.13 dependency: jpeg-turbo
+==> Downloading https://ghcr.io/v2/homebrew/core/jpeg-turbo/manifests/3.1.0
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/6a56a664f24b0435ac129cb33185ae84d884e0f2357ac6fd37727dad9ac5c7d7--jpeg-turbo-3.1.0.bottle_manifest.json
+==> Pouring jpeg-turbo--3.1.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/jpeg-turbo/3.1.0: 47 files, 4.8MB
+==> Installing scala@2.13 dependency: libtiff
+==> Downloading https://ghcr.io/v2/homebrew/core/libtiff/manifests/4.7.0-1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/cc8add3c5369d6c22906554ebc395ebe89f1ac410112bd65bc6d286d4e02f210--libtiff-4.7.0-1.bottle_manifest.json
+==> Pouring libtiff--4.7.0.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libtiff/4.7.0: 488 files, 8.2MB
+==> Installing scala@2.13 dependency: little-cms2
+==> Downloading https://ghcr.io/v2/homebrew/core/little-cms2/manifests/2.17
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/0e5e5ac9e1df07ae001662a85a70b344b31345897c284172f14874c9d329cb85--little-cms2-2.17.bottle_manifest.json
+==> Pouring little-cms2--2.17.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/little-cms2/2.17: 24 files, 1.6MB
+==> Installing scala@2.13 dependency: alsa-lib
+==> Downloading https://ghcr.io/v2/homebrew/core/alsa-lib/manifests/1.2.13
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/acb4f023372dcd1f9d3f416033c989ff9b88990338554dd9cf1b6e6031747477--alsa-lib-1.2.13.bottle_manifest.json
+==> Pouring alsa-lib--1.2.13.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/alsa-lib/1.2.13: 147 files, 2.3MB
+==> Installing scala@2.13 dependency: libxfixes
+==> Downloading https://ghcr.io/v2/homebrew/core/libxfixes/manifests/6.0.1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/b78eeb464b4c153eb6e75a04ba240b4972cdc642e77e9c5085e186630c2c4862--libxfixes-6.0.1.bottle_manifest.json
+==> Pouring libxfixes--6.0.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxfixes/6.0.1: 14 files, 175.5KB
+==> Installing scala@2.13 dependency: libxi
+==> Downloading https://ghcr.io/v2/homebrew/core/libxi/manifests/1.8.2
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/089cbc546059463acb4a311e70491ca9665a8c04ab7683bc3c0803ee15b4d698--libxi-1.8.2.bottle_manifest.json
+==> Pouring libxi--1.8.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxi/1.8.2: 87 files, 811.5KB
+==> Installing scala@2.13 dependency: libxrandr
+==> Downloading https://ghcr.io/v2/homebrew/core/libxrandr/manifests/1.5.4
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/1fbb247f2abdbccf5d8f0682109acc180855bab14fd80473fbc15f74ebef0dbc--libxrandr-1.5.4.bottle_manifest.json
+==> Pouring libxrandr--1.5.4.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxrandr/1.5.4: 28 files, 284KB
+==> Installing scala@2.13 dependency: libice
+==> Downloading https://ghcr.io/v2/homebrew/core/libice/manifests/1.1.2
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/9ffe5667c280fcd554aff36edf85f39be52470b3acea3deecec279ffc752777e--libice-1.1.2.bottle_manifest.json
+==> Pouring libice--1.1.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libice/1.1.2: 18 files, 469.3KB
+==> Installing scala@2.13 dependency: libsm
+==> Downloading https://ghcr.io/v2/homebrew/core/libsm/manifests/1.2.5
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/7a3b571da3d20865163ecb1a9bee31b953038aadd3f6b2e0782c82be384c0f89--libsm-1.2.5.bottle_manifest.json
+==> Pouring libsm--1.2.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libsm/1.2.5: 15 files, 224.5KB
+==> Installing scala@2.13 dependency: libxt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxt/manifests/1.3.1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/fd81a0a814c2ce635aaf8d8d460d06751a131d66cd3fcbcdf0b4d667e763abf2--libxt-1.3.1.bottle_manifest.json
+==> Pouring libxt--1.3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxt/1.3.1: 312 files, 2MB
+==> Installing scala@2.13 dependency: libxtst
+==> Downloading https://ghcr.io/v2/homebrew/core/libxtst/manifests/1.2.5
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/255b29f533b7064a6e692de37b3d9a41d73033506bec841e9900dbf2eb337a4c--libxtst-1.2.5.bottle_manifest.json
+==> Pouring libxtst--1.2.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxtst/1.2.5: 24 files, 200.5KB
+==> Installing scala@2.13 dependency: krb5
+==> Downloading https://ghcr.io/v2/homebrew/core/krb5/manifests/1.21.3
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/c5793441ca90aa09420dddd84f19d4aaf86da4f0b3f60c84940d77b1cb4c6863--krb5-1.21.3.bottle_manifest.json
+==> Pouring krb5--1.21.3.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/krb5/1.21.3: 164 files, 5.3MB
+==> Installing scala@2.13 dependency: cups
+==> Downloading https://ghcr.io/v2/homebrew/core/cups/manifests/2.4.11
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/bb2b96bbd2a7024c1ac1193ac7e73a36273fe01c1ec85a2832d2188aeb49cf64--cups-2.4.11.bottle_manifest.json
+==> Pouring cups--2.4.11.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/cups/2.4.11: 122 files, 9.6MB
+==> Installing scala@2.13 dependency: zip
+==> Downloading https://ghcr.io/v2/homebrew/core/zip/manifests/3.0-2
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/794b38c4c17afd41abe76b9b8dc73cabd3543bdb3816b4acca62ff0132aa1225--zip-3.0-2.bottle_manifest.json
+==> Pouring zip--3.0.x86_64_linux.bottle.2.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/zip/3.0: 15 files, 857.0KB
+==> Installing scala@2.13 dependency: openjdk
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/manifests/23.0.2
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/8dea1e6c16fdb5358c4865d24639ab139310acfcd2a8472a89f458bbb046eac5--openjdk-23.0.2.bottle_manifest.json
+==> Pouring openjdk--23.0.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/openjdk/23.0.2: 597 files, 348MB
+==> Installing scala@2.13
+==> Pouring scala@2.13--2.13.16.all.bottle.tar.gz
+==> Caveats
+To use with IntelliJ, set the Scala home to:
+  /home/linuxbrew/.linuxbrew/opt/scala@2.13/idea
+
+scala@2.13 is keg-only, which means it was not symlinked into /home/linuxbrew/.linuxbrew,
+because this is an alternate version of another formula.
+
+If you need to have scala@2.13 first in your PATH, run:
+  echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/scala@2.13/bin:$PATH"' >> ~/.profile
+==> Summary
+🍺  /home/linuxbrew/.linuxbrew/Cellar/scala@2.13/2.13.16: 42 files, 23.2MB
+==> Running `brew cleanup scala@2.13`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Caveats
+==> scala@2.13
+To use with IntelliJ, set the Scala home to:
+  /home/linuxbrew/.linuxbrew/opt/scala@2.13/idea
+
+scala@2.13 is keg-only, which means it was not symlinked into /home/linuxbrew/.linuxbrew,
+because this is an alternate version of another formula.
+
+If you need to have scala@2.13 first in your PATH, run:
+  echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/scala@2.13/bin:$PATH"' >> ~/.profile
+paopao_gangpao@de-zoomcamp:~/spark$ scala -version
+-bash: scala: command not found
+paopao_gangpao@de-zoomcamp:~/spark$ brew install scala@2.13
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+Warning: scala@2.13 2.13.16 is already installed and up-to-date.
+To reinstall 2.13.16, run:
+  brew reinstall scala@2.13
+paopao_gangpao@de-zoomcamp:~/spark$ scala -version
+-bash: scala: command not found
+paopao_gangpao@de-zoomcamp:~/spark$ brew install apache-spark
+==> Downloading https://ghcr.io/v2/homebrew/core/apache-spark/manifests/3.5.5
+######################################################################################################### 100.0%
+==> Fetching dependencies for apache-spark: openjdk@17
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/17/manifests/17.0.14-1
+######################################################################################################### 100.0%
+==> Fetching openjdk@17
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/17/blobs/sha256:fa34be6d45cdec8a0220df90fac18105ebd40cd
+######################################################################################################### 100.0%
+==> Fetching apache-spark
+==> Downloading https://ghcr.io/v2/homebrew/core/apache-spark/blobs/sha256:ee6cf6111d441cd77534189b45edf345a560a
+######################################################################################################### 100.0%
+==> Installing dependencies for apache-spark: openjdk@17
+==> Installing apache-spark dependency: openjdk@17
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/17/manifests/17.0.14-1
+Already downloaded: /home/paopao_gangpao/.cache/Homebrew/downloads/bb1f4418cd7cb469ab902ea185d33a07f6a837f58930b575bb669712613e0623--openjdk@17-17.0.14-1.bottle_manifest.json
+==> Pouring openjdk@17--17.0.14.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/openjdk@17/17.0.14: 630 files, 313MB
+==> Installing apache-spark
+==> Pouring apache-spark--3.5.5.all.bottle.tar.gz
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+🍺  /home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5: 1,823 files, 424.5MB
+==> Running `brew cleanup apache-spark`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+paopao_gangpao@de-zoomcamp:~/spark$ export SPARK_HOME=/usr/local/Cellar/apache-spark/3.2.1/libexec
+export PATH="$SPARK_HOME/bin/:$PATH"
+paopao_gangpao@de-zoomcamp:~/spark$ spark-shell
+/home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5/libexec/bin/spark-shell: line 60: /usr/local/Cellar/apache-spark/3.2.1/libexec/bin/spark-submit: No such file or directory
+paopao_gangpao@de-zoomcamp:~/spark$ /home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5/libexec
+-bash: /home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5/libexec: Is a directory
+paopao_gangpao@de-zoomcamp:~/spark$ export SPARK_HOME="/home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5/libexec"
+export PATH="$SPARK_HOME/bin:$PATH"
+paopao_gangpao@de-zoomcamp:~/spark$ spark-shell --version
+/home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5/libexec/bin/spark-class: line 71: /usr/local/Cellar/openjdk@11/11.0.12/bin/java: No such file or directory
+/home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5/libexec/bin/spark-class: line 97: CMD: bad array subscript
+paopao_gangpao@de-zoomcamp:~/spark$ sudo apt-get update && sudo apt-get install -y openjdk-11-jdk
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:4 file:/etc/apt/mirrors/debian-security.list Mirrorlist [39 B]
+Hit:7 https://packages.cloud.google.com/apt google-compute-engine-bookworm-stable InRelease
+Hit:8 https://packages.cloud.google.com/apt cloud-sdk-bookworm InRelease     
+Hit:2 https://deb.debian.org/debian bookworm InRelease                       
+Hit:3 https://deb.debian.org/debian bookworm-updates InRelease
+Hit:5 https://deb.debian.org/debian bookworm-backports InRelease
+Hit:6 https://deb.debian.org/debian-security bookworm-security InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Package openjdk-11-jdk is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'openjdk-11-jdk' has no installation candidate
+paopao_gangpao@de-zoomcamp:~/spark$ sudo update-alternatives --config java
+update-alternatives: error: no alternatives for java
+paopao_gangpao@de-zoomcamp:~/spark$ sudo apt-get update && sudo apt-get install -y openjdk-17-jdk
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 file:/etc/apt/mirrors/debian-security.list Mirrorlist [39 B]
+Hit:7 https://packages.cloud.google.com/apt google-compute-engine-bookworm-stable InRelease
+Hit:3 https://deb.debian.org/debian bookworm InRelease                       
+Hit:8 https://packages.cloud.google.com/apt cloud-sdk-bookworm InRelease     
+Hit:4 https://deb.debian.org/debian bookworm-updates InRelease
+Hit:5 https://deb.debian.org/debian bookworm-backports InRelease
+Hit:6 https://deb.debian.org/debian-security bookworm-security InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  adwaita-icon-theme alsa-topology-conf alsa-ucm-conf at-spi2-common at-spi2-core ca-certificates-java
+  dbus-user-session dconf-gsettings-backend dconf-service fontconfig fontconfig-config fonts-dejavu-core
+  fonts-dejavu-extra gsettings-desktop-schemas gtk-update-icon-cache hicolor-icon-theme java-common libasound2
+  libasound2-data libatk-bridge2.0-0 libatk-wrapper-java libatk-wrapper-java-jni libatk1.0-0 libatspi2.0-0
+  libavahi-client3 libavahi-common-data libavahi-common3 libcairo-gobject2 libcairo2 libcups2 libdatrie1
+  libdconf1 libdeflate0 libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libdrm2
+  libfontconfig1 libfontenc1 libfribidi0 libgail-common libgail18 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-bin
+  libgdk-pixbuf2.0-common libgif7 libgl1 libgl1-mesa-dri libglapi-mesa libglvnd0 libglx-mesa0 libglx0
+  libgraphite2-3 libgtk2.0-0 libgtk2.0-bin libgtk2.0-common libharfbuzz0b libice-dev libice6 libjbig0
+  libjpeg62-turbo liblcms2-2 liblerc4 libllvm15 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0
+  libpangoft2-1.0-0 libpciaccess0 libpcsclite1 libpixman-1-0 libpthread-stubs0-dev librsvg2-2 librsvg2-common
+  libsensors-config libsensors5 libsm-dev libsm6 libthai-data libthai0 libtiff6 libwebp7 libx11-6 libx11-data
+  libx11-dev libx11-xcb1 libxau-dev libxau6 libxaw7 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0
+  libxcb-randr0 libxcb-render0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1 libxcb1-dev
+  libxcomposite1 libxcursor1 libxdamage1 libxdmcp-dev libxdmcp6 libxext6 libxfixes3 libxft2 libxi6
+  libxinerama1 libxkbfile1 libxmu6 libxmuu1 libxpm4 libxrandr2 libxrender1 libxshmfence1 libxt-dev libxt6
+  libxtst6 libxv1 libxxf86dga1 libxxf86vm1 libz3-4 openjdk-17-jdk-headless openjdk-17-jre
+  openjdk-17-jre-headless x11-common x11-utils x11proto-dev xorg-sgml-doctools xtrans-dev
+Suggested packages:
+  default-jre libasound2-plugins alsa-utils cups-common gvfs libice-doc liblcms2-utils pcscd librsvg2-bin
+  lm-sensors libsm-doc libx11-doc libxcb-doc libxt-doc openjdk-17-demo openjdk-17-source visualvm libnss-mdns
+  fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic mesa-utils
+The following NEW packages will be installed:
+  adwaita-icon-theme alsa-topology-conf alsa-ucm-conf at-spi2-common at-spi2-core ca-certificates-java
+  dbus-user-session dconf-gsettings-backend dconf-service fontconfig fontconfig-config fonts-dejavu-core
+  fonts-dejavu-extra gsettings-desktop-schemas gtk-update-icon-cache hicolor-icon-theme java-common libasound2
+  libasound2-data libatk-bridge2.0-0 libatk-wrapper-java libatk-wrapper-java-jni libatk1.0-0 libatspi2.0-0
+  libavahi-client3 libavahi-common-data libavahi-common3 libcairo-gobject2 libcairo2 libcups2 libdatrie1
+  libdconf1 libdeflate0 libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libdrm2
+  libfontconfig1 libfontenc1 libfribidi0 libgail-common libgail18 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-bin
+  libgdk-pixbuf2.0-common libgif7 libgl1 libgl1-mesa-dri libglapi-mesa libglvnd0 libglx-mesa0 libglx0
+  libgraphite2-3 libgtk2.0-0 libgtk2.0-bin libgtk2.0-common libharfbuzz0b libice-dev libice6 libjbig0
+  libjpeg62-turbo liblcms2-2 liblerc4 libllvm15 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0
+  libpangoft2-1.0-0 libpciaccess0 libpcsclite1 libpixman-1-0 libpthread-stubs0-dev librsvg2-2 librsvg2-common
+  libsensors-config libsensors5 libsm-dev libsm6 libthai-data libthai0 libtiff6 libwebp7 libx11-6 libx11-data
+  libx11-dev libx11-xcb1 libxau-dev libxau6 libxaw7 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0
+  libxcb-randr0 libxcb-render0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1 libxcb1-dev
+  libxcomposite1 libxcursor1 libxdamage1 libxdmcp-dev libxdmcp6 libxext6 libxfixes3 libxft2 libxi6
+  libxinerama1 libxkbfile1 libxmu6 libxmuu1 libxpm4 libxrandr2 libxrender1 libxshmfence1 libxt-dev libxt6
+  libxtst6 libxv1 libxxf86dga1 libxxf86vm1 libz3-4 openjdk-17-jdk openjdk-17-jdk-headless openjdk-17-jre
+  openjdk-17-jre-headless x11-common x11-utils x11proto-dev xorg-sgml-doctools xtrans-dev
+0 upgraded, 137 newly installed, 0 to remove and 10 not upgraded.
+Need to get 189 MB of archives.
+After this operation, 564 MB of additional disk space will be used.
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:135 file:/etc/apt/mirrors/debian-security.list Mirrorlist [39 B]
+Get:2 https://deb.debian.org/debian bookworm/main amd64 hicolor-icon-theme all 0.17-2 [11.4 kB]
+Get:3 https://deb.debian.org/debian bookworm/main amd64 libgdk-pixbuf2.0-common all 2.42.10+dfsg-1+deb12u1 [306 kB]
+Get:4 https://deb.debian.org/debian bookworm/main amd64 libjpeg62-turbo amd64 1:2.1.5-2 [166 kB]
+Get:5 https://deb.debian.org/debian bookworm/main amd64 libdeflate0 amd64 1.14-1 [61.4 kB]
+Get:6 https://deb.debian.org/debian bookworm/main amd64 libjbig0 amd64 2.1-6.1 [31.7 kB]
+Get:7 https://deb.debian.org/debian bookworm/main amd64 liblerc4 amd64 4.0.0+ds-2 [170 kB]
+Get:8 https://deb.debian.org/debian bookworm/main amd64 libwebp7 amd64 1.2.4-0.2+deb12u1 [286 kB]
+Get:9 https://deb.debian.org/debian bookworm/main amd64 libtiff6 amd64 4.5.0-6+deb12u2 [316 kB]
+Get:10 https://deb.debian.org/debian bookworm/main amd64 libgdk-pixbuf-2.0-0 amd64 2.42.10+dfsg-1+deb12u1 [139 kB]
+Get:11 https://deb.debian.org/debian bookworm/main amd64 gtk-update-icon-cache amd64 3.24.38-2~deb12u3 [44.2 kB]
+Get:12 https://deb.debian.org/debian bookworm/main amd64 adwaita-icon-theme all 43-1 [5124 kB]
+Get:13 https://deb.debian.org/debian bookworm/main amd64 alsa-topology-conf all 1.2.5.1-2 [15.2 kB]
+Get:14 https://deb.debian.org/debian bookworm/main amd64 libasound2-data all 1.2.8-1 [20.5 kB]
+Get:15 https://deb.debian.org/debian bookworm/main amd64 libasound2 amd64 1.2.8-1+b1 [362 kB]
+Get:16 https://deb.debian.org/debian bookworm/main amd64 alsa-ucm-conf all 1.2.8-1 [51.7 kB]
+Get:17 https://deb.debian.org/debian bookworm/main amd64 at-spi2-common all 2.46.0-5 [162 kB]
+Get:18 https://deb.debian.org/debian bookworm/main amd64 libxau6 amd64 1:1.0.9-1 [19.7 kB]
+Get:19 https://deb.debian.org/debian bookworm/main amd64 libxdmcp6 amd64 1:1.1.2-3 [26.3 kB]
+Get:20 https://deb.debian.org/debian bookworm/main amd64 libxcb1 amd64 1.15-1 [144 kB]
+Get:21 https://deb.debian.org/debian bookworm/main amd64 libx11-data all 2:1.8.4-2+deb12u2 [292 kB]
+Get:22 https://deb.debian.org/debian bookworm/main amd64 libx11-6 amd64 2:1.8.4-2+deb12u2 [760 kB]
+Get:23 https://deb.debian.org/debian bookworm/main amd64 libxext6 amd64 2:1.3.4-1+b1 [52.9 kB]
+Get:24 https://deb.debian.org/debian bookworm/main amd64 libxi6 amd64 2:1.8-1+b1 [84.2 kB]
+Get:25 https://deb.debian.org/debian bookworm/main amd64 libatspi2.0-0 amd64 2.46.0-5 [75.4 kB]
+Get:26 https://deb.debian.org/debian bookworm/main amd64 x11-common all 1:7.7+23 [252 kB]
+Get:27 https://deb.debian.org/debian bookworm/main amd64 libxtst6 amd64 2:1.2.3-1.1 [28.0 kB]
+Get:28 https://deb.debian.org/debian bookworm/main amd64 dbus-user-session amd64 1.14.10-1~deb12u1 [78.1 kB]
+Get:29 https://deb.debian.org/debian bookworm/main amd64 libdconf1 amd64 0.40.0-4 [40.9 kB]
+Get:30 https://deb.debian.org/debian bookworm/main amd64 dconf-service amd64 0.40.0-4 [31.6 kB]
+Get:31 https://deb.debian.org/debian bookworm/main amd64 dconf-gsettings-backend amd64 0.40.0-4 [27.8 kB]
+Get:32 https://deb.debian.org/debian bookworm/main amd64 gsettings-desktop-schemas all 43.0-1 [643 kB]
+Get:33 https://deb.debian.org/debian bookworm/main amd64 at-spi2-core amd64 2.46.0-5 [57.3 kB]
+Get:34 https://deb.debian.org/debian bookworm/main amd64 ca-certificates-java all 20230710~deb12u1 [11.9 kB]
+Get:35 https://deb.debian.org/debian bookworm/main amd64 fonts-dejavu-core all 2.37-6 [1068 kB]
+Get:36 https://deb.debian.org/debian bookworm/main amd64 fontconfig-config amd64 2.14.1-4 [315 kB]
+Get:37 https://deb.debian.org/debian bookworm/main amd64 libfontconfig1 amd64 2.14.1-4 [386 kB]
+Get:38 https://deb.debian.org/debian bookworm/main amd64 fontconfig amd64 2.14.1-4 [449 kB]
+Get:39 https://deb.debian.org/debian bookworm/main amd64 fonts-dejavu-extra all 2.37-6 [1985 kB]
+Get:40 https://deb.debian.org/debian bookworm/main amd64 java-common all 0.74 [6388 B]
+Get:41 https://deb.debian.org/debian bookworm/main amd64 libatk1.0-0 amd64 2.46.0-5 [49.6 kB]
+Get:42 https://deb.debian.org/debian bookworm/main amd64 libatk-bridge2.0-0 amd64 2.46.0-5 [64.6 kB]
+Get:43 https://deb.debian.org/debian bookworm/main amd64 libfontenc1 amd64 1:1.1.4-1 [24.3 kB]
+Get:44 https://deb.debian.org/debian bookworm/main amd64 libglvnd0 amd64 1.6.0-1 [51.8 kB]
+Get:45 https://deb.debian.org/debian bookworm/main amd64 libdrm-common all 2.4.114-1 [7112 B]
+Get:46 https://deb.debian.org/debian bookworm/main amd64 libdrm2 amd64 2.4.114-1+b1 [37.5 kB]
+Get:47 https://deb.debian.org/debian bookworm/main amd64 libglapi-mesa amd64 22.3.6-1+deb12u1 [35.7 kB]
+Get:48 https://deb.debian.org/debian bookworm/main amd64 libx11-xcb1 amd64 2:1.8.4-2+deb12u2 [192 kB]
+Get:49 https://deb.debian.org/debian bookworm/main amd64 libxcb-dri2-0 amd64 1.15-1 [107 kB]
+Get:50 https://deb.debian.org/debian bookworm/main amd64 libxcb-dri3-0 amd64 1.15-1 [107 kB]
+Get:51 https://deb.debian.org/debian bookworm/main amd64 libxcb-glx0 amd64 1.15-1 [122 kB]
+Get:52 https://deb.debian.org/debian bookworm/main amd64 libxcb-present0 amd64 1.15-1 [105 kB]
+Get:53 https://deb.debian.org/debian bookworm/main amd64 libxcb-randr0 amd64 1.15-1 [117 kB]
+Get:54 https://deb.debian.org/debian bookworm/main amd64 libxcb-shm0 amd64 1.15-1 [105 kB]
+Get:55 https://deb.debian.org/debian bookworm/main amd64 libxcb-sync1 amd64 1.15-1 [109 kB]
+Get:56 https://deb.debian.org/debian bookworm/main amd64 libxcb-xfixes0 amd64 1.15-1 [109 kB]
+Get:57 https://deb.debian.org/debian bookworm/main amd64 libxfixes3 amd64 1:6.0.0-2 [22.7 kB]
+Get:58 https://deb.debian.org/debian bookworm/main amd64 libxshmfence1 amd64 1.3-1 [8820 B]
+Get:59 https://deb.debian.org/debian bookworm/main amd64 libxxf86vm1 amd64 1:1.1.4-1+b2 [20.8 kB]
+Get:60 https://deb.debian.org/debian bookworm/main amd64 libdrm-amdgpu1 amd64 2.4.114-1+b1 [20.9 kB]
+Get:61 https://deb.debian.org/debian bookworm/main amd64 libpciaccess0 amd64 0.17-2 [51.4 kB]
+Get:62 https://deb.debian.org/debian bookworm/main amd64 libdrm-intel1 amd64 2.4.114-1+b1 [64.0 kB]
+Get:63 https://deb.debian.org/debian bookworm/main amd64 libdrm-nouveau2 amd64 2.4.114-1+b1 [19.1 kB]
+Get:64 https://deb.debian.org/debian bookworm/main amd64 libdrm-radeon1 amd64 2.4.114-1+b1 [21.8 kB]
+Get:65 https://deb.debian.org/debian bookworm/main amd64 libz3-4 amd64 4.8.12-3.1 [7216 kB]
+Get:66 https://deb.debian.org/debian bookworm/main amd64 libllvm15 amd64 1:15.0.6-4+b1 [23.1 MB]
+Get:67 https://deb.debian.org/debian bookworm/main amd64 libsensors-config all 1:3.6.0-7.1 [14.3 kB]
+Get:68 https://deb.debian.org/debian bookworm/main amd64 libsensors5 amd64 1:3.6.0-7.1 [34.2 kB]
+Get:69 https://deb.debian.org/debian bookworm/main amd64 libgl1-mesa-dri amd64 22.3.6-1+deb12u1 [7239 kB]
+Get:70 https://deb.debian.org/debian bookworm/main amd64 libglx-mesa0 amd64 22.3.6-1+deb12u1 [147 kB]
+Get:71 https://deb.debian.org/debian bookworm/main amd64 libglx0 amd64 1.6.0-1 [34.4 kB]
+Get:72 https://deb.debian.org/debian bookworm/main amd64 libgl1 amd64 1.6.0-1 [88.4 kB]
+Get:73 https://deb.debian.org/debian bookworm/main amd64 libice6 amd64 2:1.0.10-1 [58.5 kB]
+Get:74 https://deb.debian.org/debian bookworm/main amd64 libsm6 amd64 2:1.2.3-1 [35.1 kB]
+Get:75 https://deb.debian.org/debian bookworm/main amd64 libxt6 amd64 1:1.2.1-1.1 [186 kB]
+Get:76 https://deb.debian.org/debian bookworm/main amd64 libxmu6 amd64 2:1.1.3-3 [60.1 kB]
+Get:77 https://deb.debian.org/debian bookworm/main amd64 libxpm4 amd64 1:3.5.12-1.1+deb12u1 [48.6 kB]
+Get:78 https://deb.debian.org/debian bookworm/main amd64 libxaw7 amd64 2:1.0.14-1 [201 kB]
+Get:79 https://deb.debian.org/debian bookworm/main amd64 libxcb-shape0 amd64 1.15-1 [106 kB]
+Get:80 https://deb.debian.org/debian bookworm/main amd64 libxcomposite1 amd64 1:0.4.5-1 [16.6 kB]
+Get:81 https://deb.debian.org/debian bookworm/main amd64 libxrender1 amd64 1:0.9.10-1.1 [33.2 kB]
+Get:82 https://deb.debian.org/debian bookworm/main amd64 libxft2 amd64 2.3.6-1 [61.8 kB]
+Get:83 https://deb.debian.org/debian bookworm/main amd64 libxinerama1 amd64 2:1.1.4-3 [17.8 kB]
+Get:84 https://deb.debian.org/debian bookworm/main amd64 libxkbfile1 amd64 1:1.1.0-1 [75.2 kB]
+Get:85 https://deb.debian.org/debian bookworm/main amd64 libxmuu1 amd64 2:1.1.3-3 [23.9 kB]
+Get:86 https://deb.debian.org/debian bookworm/main amd64 libxrandr2 amd64 2:1.5.2-2+b1 [39.2 kB]
+Get:87 https://deb.debian.org/debian bookworm/main amd64 libxv1 amd64 2:1.0.11-1.1 [24.8 kB]
+Get:88 https://deb.debian.org/debian bookworm/main amd64 libxxf86dga1 amd64 2:1.1.5-1 [22.1 kB]
+Get:89 https://deb.debian.org/debian bookworm/main amd64 x11-utils amd64 7.7+5 [202 kB]
+Get:90 https://deb.debian.org/debian bookworm/main amd64 libatk-wrapper-java all 0.40.0-3 [63.4 kB]
+Get:91 https://deb.debian.org/debian bookworm/main amd64 libatk-wrapper-java-jni amd64 0.40.0-3 [54.6 kB]
+Get:92 https://deb.debian.org/debian bookworm/main amd64 libavahi-common-data amd64 0.8-10+deb12u1 [107 kB]
+Get:93 https://deb.debian.org/debian bookworm/main amd64 libavahi-common3 amd64 0.8-10+deb12u1 [42.1 kB]
+Get:94 https://deb.debian.org/debian bookworm/main amd64 libavahi-client3 amd64 0.8-10+deb12u1 [45.8 kB]
+Get:95 https://deb.debian.org/debian bookworm/main amd64 libpixman-1-0 amd64 0.42.2-1 [546 kB]
+Get:96 https://deb.debian.org/debian bookworm/main amd64 libxcb-render0 amd64 1.15-1 [115 kB]
+Get:97 https://deb.debian.org/debian bookworm/main amd64 libcairo2 amd64 1.16.0-7 [575 kB]
+Get:98 https://deb.debian.org/debian bookworm/main amd64 libcairo-gobject2 amd64 1.16.0-7 [112 kB]
+Get:99 https://deb.debian.org/debian bookworm/main amd64 libcups2 amd64 2.4.2-3+deb12u8 [246 kB]
+Get:100 https://deb.debian.org/debian bookworm/main amd64 libdatrie1 amd64 0.2.13-2+b1 [43.3 kB]
+Get:101 https://deb.debian.org/debian bookworm/main amd64 libfribidi0 amd64 1.0.8-2.1 [65.0 kB]
+Get:102 https://deb.debian.org/debian bookworm/main amd64 libgtk2.0-common all 2.24.33-2+deb12u1 [2660 kB]
+Get:103 https://deb.debian.org/debian bookworm/main amd64 libgraphite2-3 amd64 1.3.14-1 [81.2 kB]
+Get:104 https://deb.debian.org/debian bookworm/main amd64 libharfbuzz0b amd64 6.0.0+dfsg-3 [1945 kB]
+Get:105 https://deb.debian.org/debian bookworm/main amd64 libthai-data all 0.1.29-1 [176 kB]
+Get:106 https://deb.debian.org/debian bookworm/main amd64 libthai0 amd64 0.1.29-1 [57.5 kB]
+Get:107 https://deb.debian.org/debian bookworm/main amd64 libpango-1.0-0 amd64 1.50.12+ds-1 [212 kB]
+Get:108 https://deb.debian.org/debian bookworm/main amd64 libpangoft2-1.0-0 amd64 1.50.12+ds-1 [47.4 kB]
+Get:109 https://deb.debian.org/debian bookworm/main amd64 libpangocairo-1.0-0 amd64 1.50.12+ds-1 [34.2 kB]
+Get:110 https://deb.debian.org/debian bookworm/main amd64 libxcursor1 amd64 1:1.2.1-1 [40.9 kB]
+Get:111 https://deb.debian.org/debian bookworm/main amd64 libxdamage1 amd64 1:1.1.6-1 [15.1 kB]
+Get:112 https://deb.debian.org/debian bookworm/main amd64 libgtk2.0-0 amd64 2.24.33-2+deb12u1 [1811 kB]
+Get:113 https://deb.debian.org/debian bookworm/main amd64 libgail18 amd64 2.24.33-2+deb12u1 [17.7 kB]
+Get:114 https://deb.debian.org/debian bookworm/main amd64 libgail-common amd64 2.24.33-2+deb12u1 [119 kB]
+Get:115 https://deb.debian.org/debian bookworm/main amd64 libgdk-pixbuf2.0-bin amd64 2.42.10+dfsg-1+deb12u1 [17.7 kB]
+Get:116 https://deb.debian.org/debian bookworm/main amd64 libgif7 amd64 5.2.1-2.5 [46.9 kB]
+Get:117 https://deb.debian.org/debian bookworm/main amd64 libgtk2.0-bin amd64 2.24.33-2+deb12u1 [10.9 kB]
+Get:118 https://deb.debian.org/debian bookworm/main amd64 xorg-sgml-doctools all 1:1.11-1.1 [22.1 kB]
+Get:119 https://deb.debian.org/debian bookworm/main amd64 x11proto-dev all 2022.1-1 [599 kB]
+Get:120 https://deb.debian.org/debian bookworm/main amd64 libice-dev amd64 2:1.0.10-1 [67.1 kB]
+Get:121 https://deb.debian.org/debian bookworm/main amd64 liblcms2-2 amd64 2.14-2 [154 kB]
+Get:122 https://deb.debian.org/debian bookworm/main amd64 libnspr4 amd64 2:4.35-1 [113 kB]
+Get:123 https://deb.debian.org/debian bookworm/main amd64 libnss3 amd64 2:3.87.1-1+deb12u1 [1331 kB]
+Get:124 https://deb.debian.org/debian bookworm/main amd64 libpcsclite1 amd64 1.9.9-2 [49.7 kB]
+Get:125 https://deb.debian.org/debian bookworm/main amd64 libpthread-stubs0-dev amd64 0.4-1 [5344 B]
+Get:126 https://deb.debian.org/debian bookworm/main amd64 librsvg2-2 amd64 2.54.7+dfsg-1~deb12u1 [2620 kB]
+Get:127 https://deb.debian.org/debian bookworm/main amd64 librsvg2-common amd64 2.54.7+dfsg-1~deb12u1 [21.4 kB]
+Get:128 https://deb.debian.org/debian bookworm/main amd64 libsm-dev amd64 2:1.2.3-1 [38.0 kB]
+Get:129 https://deb.debian.org/debian bookworm/main amd64 libxau-dev amd64 1:1.0.9-1 [22.9 kB]
+Get:130 https://deb.debian.org/debian bookworm/main amd64 libxdmcp-dev amd64 1:1.1.2-3 [42.2 kB]
+Get:131 https://deb.debian.org/debian bookworm/main amd64 xtrans-dev all 1.4.0-1 [98.7 kB]
+Get:132 https://deb.debian.org/debian bookworm/main amd64 libxcb1-dev amd64 1.15-1 [181 kB]
+Get:133 https://deb.debian.org/debian bookworm/main amd64 libx11-dev amd64 2:1.8.4-2+deb12u2 [837 kB]
+Get:134 https://deb.debian.org/debian bookworm/main amd64 libxt-dev amd64 1:1.2.1-1.1 [405 kB]
+Get:136 https://deb.debian.org/debian-security bookworm-security/main amd64 openjdk-17-jre-headless amd64 17.0.14+7-1~deb12u1 [43.8 MB]
+Get:137 https://deb.debian.org/debian-security bookworm-security/main amd64 openjdk-17-jre amd64 17.0.14+7-1~deb12u1 [210 kB]
+Get:138 https://deb.debian.org/debian-security bookworm-security/main amd64 openjdk-17-jdk-headless amd64 17.0.14+7-1~deb12u1 [71.5 MB]
+Get:139 https://deb.debian.org/debian-security bookworm-security/main amd64 openjdk-17-jdk amd64 17.0.14+7-1~deb12u1 [2379 kB]
+Fetched 189 MB in 2s (109 MB/s)            
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+Selecting previously unselected package hicolor-icon-theme.
+(Reading database ... 73665 files and directories currently installed.)
+Preparing to unpack .../000-hicolor-icon-theme_0.17-2_all.deb ...
+Unpacking hicolor-icon-theme (0.17-2) ...
+Selecting previously unselected package libgdk-pixbuf2.0-common.
+Preparing to unpack .../001-libgdk-pixbuf2.0-common_2.42.10+dfsg-1+deb12u1_all.deb ...
+Unpacking libgdk-pixbuf2.0-common (2.42.10+dfsg-1+deb12u1) ...
+Selecting previously unselected package libjpeg62-turbo:amd64.
+Preparing to unpack .../002-libjpeg62-turbo_1%3a2.1.5-2_amd64.deb ...
+Unpacking libjpeg62-turbo:amd64 (1:2.1.5-2) ...
+Selecting previously unselected package libdeflate0:amd64.
+Preparing to unpack .../003-libdeflate0_1.14-1_amd64.deb ...
+Unpacking libdeflate0:amd64 (1.14-1) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../004-libjbig0_2.1-6.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-6.1) ...
+Selecting previously unselected package liblerc4:amd64.
+Preparing to unpack .../005-liblerc4_4.0.0+ds-2_amd64.deb ...
+Unpacking liblerc4:amd64 (4.0.0+ds-2) ...
+Selecting previously unselected package libwebp7:amd64.
+Preparing to unpack .../006-libwebp7_1.2.4-0.2+deb12u1_amd64.deb ...
+Unpacking libwebp7:amd64 (1.2.4-0.2+deb12u1) ...
+Selecting previously unselected package libtiff6:amd64.
+Preparing to unpack .../007-libtiff6_4.5.0-6+deb12u2_amd64.deb ...
+Unpacking libtiff6:amd64 (4.5.0-6+deb12u2) ...
+Selecting previously unselected package libgdk-pixbuf-2.0-0:amd64.
+Preparing to unpack .../008-libgdk-pixbuf-2.0-0_2.42.10+dfsg-1+deb12u1_amd64.deb ...
+Unpacking libgdk-pixbuf-2.0-0:amd64 (2.42.10+dfsg-1+deb12u1) ...
+Selecting previously unselected package gtk-update-icon-cache.
+Preparing to unpack .../009-gtk-update-icon-cache_3.24.38-2~deb12u3_amd64.deb ...
+Unpacking gtk-update-icon-cache (3.24.38-2~deb12u3) ...
+Selecting previously unselected package adwaita-icon-theme.
+Preparing to unpack .../010-adwaita-icon-theme_43-1_all.deb ...
+Unpacking adwaita-icon-theme (43-1) ...
+Selecting previously unselected package alsa-topology-conf.
+Preparing to unpack .../011-alsa-topology-conf_1.2.5.1-2_all.deb ...
+Unpacking alsa-topology-conf (1.2.5.1-2) ...
+Selecting previously unselected package libasound2-data.
+Preparing to unpack .../012-libasound2-data_1.2.8-1_all.deb ...
+Unpacking libasound2-data (1.2.8-1) ...
+Selecting previously unselected package libasound2:amd64.
+Preparing to unpack .../013-libasound2_1.2.8-1+b1_amd64.deb ...
+Unpacking libasound2:amd64 (1.2.8-1+b1) ...
+Selecting previously unselected package alsa-ucm-conf.
+Preparing to unpack .../014-alsa-ucm-conf_1.2.8-1_all.deb ...
+Unpacking alsa-ucm-conf (1.2.8-1) ...
+Selecting previously unselected package at-spi2-common.
+Preparing to unpack .../015-at-spi2-common_2.46.0-5_all.deb ...
+Unpacking at-spi2-common (2.46.0-5) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../016-libxau6_1%3a1.0.9-1_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../017-libxdmcp6_1%3a1.1.2-3_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.2-3) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../018-libxcb1_1.15-1_amd64.deb ...
+Unpacking libxcb1:amd64 (1.15-1) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../019-libx11-data_2%3a1.8.4-2+deb12u2_all.deb ...
+Unpacking libx11-data (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../020-libx11-6_2%3a1.8.4-2+deb12u2_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../021-libxext6_2%3a1.3.4-1+b1_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1+b1) ...
+Selecting previously unselected package libxi6:amd64.
+Preparing to unpack .../022-libxi6_2%3a1.8-1+b1_amd64.deb ...
+Unpacking libxi6:amd64 (2:1.8-1+b1) ...
+Selecting previously unselected package libatspi2.0-0:amd64.
+Preparing to unpack .../023-libatspi2.0-0_2.46.0-5_amd64.deb ...
+Unpacking libatspi2.0-0:amd64 (2.46.0-5) ...
+Selecting previously unselected package x11-common.
+Preparing to unpack .../024-x11-common_1%3a7.7+23_all.deb ...
+Unpacking x11-common (1:7.7+23) ...
+Selecting previously unselected package libxtst6:amd64.
+Preparing to unpack .../025-libxtst6_2%3a1.2.3-1.1_amd64.deb ...
+Unpacking libxtst6:amd64 (2:1.2.3-1.1) ...
+Selecting previously unselected package dbus-user-session.
+Preparing to unpack .../026-dbus-user-session_1.14.10-1~deb12u1_amd64.deb ...
+Unpacking dbus-user-session (1.14.10-1~deb12u1) ...
+Selecting previously unselected package libdconf1:amd64.
+Preparing to unpack .../027-libdconf1_0.40.0-4_amd64.deb ...
+Unpacking libdconf1:amd64 (0.40.0-4) ...
+Selecting previously unselected package dconf-service.
+Preparing to unpack .../028-dconf-service_0.40.0-4_amd64.deb ...
+Unpacking dconf-service (0.40.0-4) ...
+Selecting previously unselected package dconf-gsettings-backend:amd64.
+Preparing to unpack .../029-dconf-gsettings-backend_0.40.0-4_amd64.deb ...
+Unpacking dconf-gsettings-backend:amd64 (0.40.0-4) ...
+Selecting previously unselected package gsettings-desktop-schemas.
+Preparing to unpack .../030-gsettings-desktop-schemas_43.0-1_all.deb ...
+Unpacking gsettings-desktop-schemas (43.0-1) ...
+Selecting previously unselected package at-spi2-core.
+Preparing to unpack .../031-at-spi2-core_2.46.0-5_amd64.deb ...
+Unpacking at-spi2-core (2.46.0-5) ...
+Selecting previously unselected package ca-certificates-java.
+Preparing to unpack .../032-ca-certificates-java_20230710~deb12u1_all.deb ...
+Unpacking ca-certificates-java (20230710~deb12u1) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../033-fonts-dejavu-core_2.37-6_all.deb ...
+Unpacking fonts-dejavu-core (2.37-6) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../034-fontconfig-config_2.14.1-4_amd64.deb ...
+Unpacking fontconfig-config (2.14.1-4) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../035-libfontconfig1_2.14.1-4_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.14.1-4) ...
+Selecting previously unselected package fontconfig.
+Preparing to unpack .../036-fontconfig_2.14.1-4_amd64.deb ...
+Unpacking fontconfig (2.14.1-4) ...
+Selecting previously unselected package fonts-dejavu-extra.
+Preparing to unpack .../037-fonts-dejavu-extra_2.37-6_all.deb ...
+Unpacking fonts-dejavu-extra (2.37-6) ...
+Selecting previously unselected package java-common.
+Preparing to unpack .../038-java-common_0.74_all.deb ...
+Unpacking java-common (0.74) ...
+Selecting previously unselected package libatk1.0-0:amd64.
+Preparing to unpack .../039-libatk1.0-0_2.46.0-5_amd64.deb ...
+Unpacking libatk1.0-0:amd64 (2.46.0-5) ...
+Selecting previously unselected package libatk-bridge2.0-0:amd64.
+Preparing to unpack .../040-libatk-bridge2.0-0_2.46.0-5_amd64.deb ...
+Unpacking libatk-bridge2.0-0:amd64 (2.46.0-5) ...
+Selecting previously unselected package libfontenc1:amd64.
+Preparing to unpack .../041-libfontenc1_1%3a1.1.4-1_amd64.deb ...
+Unpacking libfontenc1:amd64 (1:1.1.4-1) ...
+Selecting previously unselected package libglvnd0:amd64.
+Preparing to unpack .../042-libglvnd0_1.6.0-1_amd64.deb ...
+Unpacking libglvnd0:amd64 (1.6.0-1) ...
+Selecting previously unselected package libdrm-common.
+Preparing to unpack .../043-libdrm-common_2.4.114-1_all.deb ...
+Unpacking libdrm-common (2.4.114-1) ...
+Selecting previously unselected package libdrm2:amd64.
+Preparing to unpack .../044-libdrm2_2.4.114-1+b1_amd64.deb ...
+Unpacking libdrm2:amd64 (2.4.114-1+b1) ...
+Selecting previously unselected package libglapi-mesa:amd64.
+Preparing to unpack .../045-libglapi-mesa_22.3.6-1+deb12u1_amd64.deb ...
+Unpacking libglapi-mesa:amd64 (22.3.6-1+deb12u1) ...
+Selecting previously unselected package libx11-xcb1:amd64.
+Preparing to unpack .../046-libx11-xcb1_2%3a1.8.4-2+deb12u2_amd64.deb ...
+Unpacking libx11-xcb1:amd64 (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libxcb-dri2-0:amd64.
+Preparing to unpack .../047-libxcb-dri2-0_1.15-1_amd64.deb ...
+Unpacking libxcb-dri2-0:amd64 (1.15-1) ...
+Selecting previously unselected package libxcb-dri3-0:amd64.
+Preparing to unpack .../048-libxcb-dri3-0_1.15-1_amd64.deb ...
+Unpacking libxcb-dri3-0:amd64 (1.15-1) ...
+Selecting previously unselected package libxcb-glx0:amd64.
+Preparing to unpack .../049-libxcb-glx0_1.15-1_amd64.deb ...
+Unpacking libxcb-glx0:amd64 (1.15-1) ...
+Selecting previously unselected package libxcb-present0:amd64.
+Preparing to unpack .../050-libxcb-present0_1.15-1_amd64.deb ...
+Unpacking libxcb-present0:amd64 (1.15-1) ...
+Selecting previously unselected package libxcb-randr0:amd64.
+Preparing to unpack .../051-libxcb-randr0_1.15-1_amd64.deb ...
+Unpacking libxcb-randr0:amd64 (1.15-1) ...
+Selecting previously unselected package libxcb-shm0:amd64.
+Preparing to unpack .../052-libxcb-shm0_1.15-1_amd64.deb ...
+Unpacking libxcb-shm0:amd64 (1.15-1) ...
+Selecting previously unselected package libxcb-sync1:amd64.
+Preparing to unpack .../053-libxcb-sync1_1.15-1_amd64.deb ...
+Unpacking libxcb-sync1:amd64 (1.15-1) ...
+Selecting previously unselected package libxcb-xfixes0:amd64.
+Preparing to unpack .../054-libxcb-xfixes0_1.15-1_amd64.deb ...
+Unpacking libxcb-xfixes0:amd64 (1.15-1) ...
+Selecting previously unselected package libxfixes3:amd64.
+Preparing to unpack .../055-libxfixes3_1%3a6.0.0-2_amd64.deb ...
+Unpacking libxfixes3:amd64 (1:6.0.0-2) ...
+Selecting previously unselected package libxshmfence1:amd64.
+Preparing to unpack .../056-libxshmfence1_1.3-1_amd64.deb ...
+Unpacking libxshmfence1:amd64 (1.3-1) ...
+Selecting previously unselected package libxxf86vm1:amd64.
+Preparing to unpack .../057-libxxf86vm1_1%3a1.1.4-1+b2_amd64.deb ...
+Unpacking libxxf86vm1:amd64 (1:1.1.4-1+b2) ...
+Selecting previously unselected package libdrm-amdgpu1:amd64.
+Preparing to unpack .../058-libdrm-amdgpu1_2.4.114-1+b1_amd64.deb ...
+Unpacking libdrm-amdgpu1:amd64 (2.4.114-1+b1) ...
+Selecting previously unselected package libpciaccess0:amd64.
+Preparing to unpack .../059-libpciaccess0_0.17-2_amd64.deb ...
+Unpacking libpciaccess0:amd64 (0.17-2) ...
+Selecting previously unselected package libdrm-intel1:amd64.
+Preparing to unpack .../060-libdrm-intel1_2.4.114-1+b1_amd64.deb ...
+Unpacking libdrm-intel1:amd64 (2.4.114-1+b1) ...
+Selecting previously unselected package libdrm-nouveau2:amd64.
+Preparing to unpack .../061-libdrm-nouveau2_2.4.114-1+b1_amd64.deb ...
+Unpacking libdrm-nouveau2:amd64 (2.4.114-1+b1) ...
+Selecting previously unselected package libdrm-radeon1:amd64.
+Preparing to unpack .../062-libdrm-radeon1_2.4.114-1+b1_amd64.deb ...
+Unpacking libdrm-radeon1:amd64 (2.4.114-1+b1) ...
+Selecting previously unselected package libz3-4:amd64.
+Preparing to unpack .../063-libz3-4_4.8.12-3.1_amd64.deb ...
+Unpacking libz3-4:amd64 (4.8.12-3.1) ...
+Selecting previously unselected package libllvm15:amd64.
+Preparing to unpack .../064-libllvm15_1%3a15.0.6-4+b1_amd64.deb ...
+Unpacking libllvm15:amd64 (1:15.0.6-4+b1) ...
+Selecting previously unselected package libsensors-config.
+Preparing to unpack .../065-libsensors-config_1%3a3.6.0-7.1_all.deb ...
+Unpacking libsensors-config (1:3.6.0-7.1) ...
+Selecting previously unselected package libsensors5:amd64.
+Preparing to unpack .../066-libsensors5_1%3a3.6.0-7.1_amd64.deb ...
+Unpacking libsensors5:amd64 (1:3.6.0-7.1) ...
+Selecting previously unselected package libgl1-mesa-dri:amd64.
+Preparing to unpack .../067-libgl1-mesa-dri_22.3.6-1+deb12u1_amd64.deb ...
+Unpacking libgl1-mesa-dri:amd64 (22.3.6-1+deb12u1) ...
+Selecting previously unselected package libglx-mesa0:amd64.
+Preparing to unpack .../068-libglx-mesa0_22.3.6-1+deb12u1_amd64.deb ...
+Unpacking libglx-mesa0:amd64 (22.3.6-1+deb12u1) ...
+Selecting previously unselected package libglx0:amd64.
+Preparing to unpack .../069-libglx0_1.6.0-1_amd64.deb ...
+Unpacking libglx0:amd64 (1.6.0-1) ...
+Selecting previously unselected package libgl1:amd64.
+Preparing to unpack .../070-libgl1_1.6.0-1_amd64.deb ...
+Unpacking libgl1:amd64 (1.6.0-1) ...
+Selecting previously unselected package libice6:amd64.
+Preparing to unpack .../071-libice6_2%3a1.0.10-1_amd64.deb ...
+Unpacking libice6:amd64 (2:1.0.10-1) ...
+Selecting previously unselected package libsm6:amd64.
+Preparing to unpack .../072-libsm6_2%3a1.2.3-1_amd64.deb ...
+Unpacking libsm6:amd64 (2:1.2.3-1) ...
+Selecting previously unselected package libxt6:amd64.
+Preparing to unpack .../073-libxt6_1%3a1.2.1-1.1_amd64.deb ...
+Unpacking libxt6:amd64 (1:1.2.1-1.1) ...
+Selecting previously unselected package libxmu6:amd64.
+Preparing to unpack .../074-libxmu6_2%3a1.1.3-3_amd64.deb ...
+Unpacking libxmu6:amd64 (2:1.1.3-3) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../075-libxpm4_1%3a3.5.12-1.1+deb12u1_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1.1+deb12u1) ...
+Selecting previously unselected package libxaw7:amd64.
+Preparing to unpack .../076-libxaw7_2%3a1.0.14-1_amd64.deb ...
+Unpacking libxaw7:amd64 (2:1.0.14-1) ...
+Selecting previously unselected package libxcb-shape0:amd64.
+Preparing to unpack .../077-libxcb-shape0_1.15-1_amd64.deb ...
+Unpacking libxcb-shape0:amd64 (1.15-1) ...
+Selecting previously unselected package libxcomposite1:amd64.
+Preparing to unpack .../078-libxcomposite1_1%3a0.4.5-1_amd64.deb ...
+Unpacking libxcomposite1:amd64 (1:0.4.5-1) ...
+Selecting previously unselected package libxrender1:amd64.
+Preparing to unpack .../079-libxrender1_1%3a0.9.10-1.1_amd64.deb ...
+Unpacking libxrender1:amd64 (1:0.9.10-1.1) ...
+Selecting previously unselected package libxft2:amd64.
+Preparing to unpack .../080-libxft2_2.3.6-1_amd64.deb ...
+Unpacking libxft2:amd64 (2.3.6-1) ...
+Selecting previously unselected package libxinerama1:amd64.
+Preparing to unpack .../081-libxinerama1_2%3a1.1.4-3_amd64.deb ...
+Unpacking libxinerama1:amd64 (2:1.1.4-3) ...
+Selecting previously unselected package libxkbfile1:amd64.
+Preparing to unpack .../082-libxkbfile1_1%3a1.1.0-1_amd64.deb ...
+Unpacking libxkbfile1:amd64 (1:1.1.0-1) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../083-libxmuu1_2%3a1.1.3-3_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-3) ...
+Selecting previously unselected package libxrandr2:amd64.
+Preparing to unpack .../084-libxrandr2_2%3a1.5.2-2+b1_amd64.deb ...
+Unpacking libxrandr2:amd64 (2:1.5.2-2+b1) ...
+Selecting previously unselected package libxv1:amd64.
+Preparing to unpack .../085-libxv1_2%3a1.0.11-1.1_amd64.deb ...
+Unpacking libxv1:amd64 (2:1.0.11-1.1) ...
+Selecting previously unselected package libxxf86dga1:amd64.
+Preparing to unpack .../086-libxxf86dga1_2%3a1.1.5-1_amd64.deb ...
+Unpacking libxxf86dga1:amd64 (2:1.1.5-1) ...
+Selecting previously unselected package x11-utils.
+Preparing to unpack .../087-x11-utils_7.7+5_amd64.deb ...
+Unpacking x11-utils (7.7+5) ...
+Selecting previously unselected package libatk-wrapper-java.
+Preparing to unpack .../088-libatk-wrapper-java_0.40.0-3_all.deb ...
+Unpacking libatk-wrapper-java (0.40.0-3) ...
+Selecting previously unselected package libatk-wrapper-java-jni:amd64.
+Preparing to unpack .../089-libatk-wrapper-java-jni_0.40.0-3_amd64.deb ...
+Unpacking libatk-wrapper-java-jni:amd64 (0.40.0-3) ...
+Selecting previously unselected package libavahi-common-data:amd64.
+Preparing to unpack .../090-libavahi-common-data_0.8-10+deb12u1_amd64.deb ...
+Unpacking libavahi-common-data:amd64 (0.8-10+deb12u1) ...
+Selecting previously unselected package libavahi-common3:amd64.
+Preparing to unpack .../091-libavahi-common3_0.8-10+deb12u1_amd64.deb ...
+Unpacking libavahi-common3:amd64 (0.8-10+deb12u1) ...
+Selecting previously unselected package libavahi-client3:amd64.
+Preparing to unpack .../092-libavahi-client3_0.8-10+deb12u1_amd64.deb ...
+Unpacking libavahi-client3:amd64 (0.8-10+deb12u1) ...
+Selecting previously unselected package libpixman-1-0:amd64.
+Preparing to unpack .../093-libpixman-1-0_0.42.2-1_amd64.deb ...
+Unpacking libpixman-1-0:amd64 (0.42.2-1) ...
+Selecting previously unselected package libxcb-render0:amd64.
+Preparing to unpack .../094-libxcb-render0_1.15-1_amd64.deb ...
+Unpacking libxcb-render0:amd64 (1.15-1) ...
+Selecting previously unselected package libcairo2:amd64.
+Preparing to unpack .../095-libcairo2_1.16.0-7_amd64.deb ...
+Unpacking libcairo2:amd64 (1.16.0-7) ...
+Selecting previously unselected package libcairo-gobject2:amd64.
+Preparing to unpack .../096-libcairo-gobject2_1.16.0-7_amd64.deb ...
+Unpacking libcairo-gobject2:amd64 (1.16.0-7) ...
+Selecting previously unselected package libcups2:amd64.
+Preparing to unpack .../097-libcups2_2.4.2-3+deb12u8_amd64.deb ...
+Unpacking libcups2:amd64 (2.4.2-3+deb12u8) ...
+Selecting previously unselected package libdatrie1:amd64.
+Preparing to unpack .../098-libdatrie1_0.2.13-2+b1_amd64.deb ...
+Unpacking libdatrie1:amd64 (0.2.13-2+b1) ...
+Selecting previously unselected package libfribidi0:amd64.
+Preparing to unpack .../099-libfribidi0_1.0.8-2.1_amd64.deb ...
+Unpacking libfribidi0:amd64 (1.0.8-2.1) ...
+Selecting previously unselected package libgtk2.0-common.
+Preparing to unpack .../100-libgtk2.0-common_2.24.33-2+deb12u1_all.deb ...
+Unpacking libgtk2.0-common (2.24.33-2+deb12u1) ...
+Selecting previously unselected package libgraphite2-3:amd64.
+Preparing to unpack .../101-libgraphite2-3_1.3.14-1_amd64.deb ...
+Unpacking libgraphite2-3:amd64 (1.3.14-1) ...
+Selecting previously unselected package libharfbuzz0b:amd64.
+Preparing to unpack .../102-libharfbuzz0b_6.0.0+dfsg-3_amd64.deb ...
+Unpacking libharfbuzz0b:amd64 (6.0.0+dfsg-3) ...
+Selecting previously unselected package libthai-data.
+Preparing to unpack .../103-libthai-data_0.1.29-1_all.deb ...
+Unpacking libthai-data (0.1.29-1) ...
+Selecting previously unselected package libthai0:amd64.
+Preparing to unpack .../104-libthai0_0.1.29-1_amd64.deb ...
+Unpacking libthai0:amd64 (0.1.29-1) ...
+Selecting previously unselected package libpango-1.0-0:amd64.
+Preparing to unpack .../105-libpango-1.0-0_1.50.12+ds-1_amd64.deb ...
+Unpacking libpango-1.0-0:amd64 (1.50.12+ds-1) ...
+Selecting previously unselected package libpangoft2-1.0-0:amd64.
+Preparing to unpack .../106-libpangoft2-1.0-0_1.50.12+ds-1_amd64.deb ...
+Unpacking libpangoft2-1.0-0:amd64 (1.50.12+ds-1) ...
+Selecting previously unselected package libpangocairo-1.0-0:amd64.
+Preparing to unpack .../107-libpangocairo-1.0-0_1.50.12+ds-1_amd64.deb ...
+Unpacking libpangocairo-1.0-0:amd64 (1.50.12+ds-1) ...
+Selecting previously unselected package libxcursor1:amd64.
+Preparing to unpack .../108-libxcursor1_1%3a1.2.1-1_amd64.deb ...
+Unpacking libxcursor1:amd64 (1:1.2.1-1) ...
+Selecting previously unselected package libxdamage1:amd64.
+Preparing to unpack .../109-libxdamage1_1%3a1.1.6-1_amd64.deb ...
+Unpacking libxdamage1:amd64 (1:1.1.6-1) ...
+Selecting previously unselected package libgtk2.0-0:amd64.
+Preparing to unpack .../110-libgtk2.0-0_2.24.33-2+deb12u1_amd64.deb ...
+Unpacking libgtk2.0-0:amd64 (2.24.33-2+deb12u1) ...
+Selecting previously unselected package libgail18:amd64.
+Preparing to unpack .../111-libgail18_2.24.33-2+deb12u1_amd64.deb ...
+Unpacking libgail18:amd64 (2.24.33-2+deb12u1) ...
+Selecting previously unselected package libgail-common:amd64.
+Preparing to unpack .../112-libgail-common_2.24.33-2+deb12u1_amd64.deb ...
+Unpacking libgail-common:amd64 (2.24.33-2+deb12u1) ...
+Selecting previously unselected package libgdk-pixbuf2.0-bin.
+Preparing to unpack .../113-libgdk-pixbuf2.0-bin_2.42.10+dfsg-1+deb12u1_amd64.deb ...
+Unpacking libgdk-pixbuf2.0-bin (2.42.10+dfsg-1+deb12u1) ...
+Selecting previously unselected package libgif7:amd64.
+Preparing to unpack .../114-libgif7_5.2.1-2.5_amd64.deb ...
+Unpacking libgif7:amd64 (5.2.1-2.5) ...
+Selecting previously unselected package libgtk2.0-bin.
+Preparing to unpack .../115-libgtk2.0-bin_2.24.33-2+deb12u1_amd64.deb ...
+Unpacking libgtk2.0-bin (2.24.33-2+deb12u1) ...
+Selecting previously unselected package xorg-sgml-doctools.
+Preparing to unpack .../116-xorg-sgml-doctools_1%3a1.11-1.1_all.deb ...
+Unpacking xorg-sgml-doctools (1:1.11-1.1) ...
+Selecting previously unselected package x11proto-dev.
+Preparing to unpack .../117-x11proto-dev_2022.1-1_all.deb ...
+Unpacking x11proto-dev (2022.1-1) ...
+Selecting previously unselected package libice-dev:amd64.
+Preparing to unpack .../118-libice-dev_2%3a1.0.10-1_amd64.deb ...
+Unpacking libice-dev:amd64 (2:1.0.10-1) ...
+Selecting previously unselected package liblcms2-2:amd64.
+Preparing to unpack .../119-liblcms2-2_2.14-2_amd64.deb ...
+Unpacking liblcms2-2:amd64 (2.14-2) ...
+Selecting previously unselected package libnspr4:amd64.
+Preparing to unpack .../120-libnspr4_2%3a4.35-1_amd64.deb ...
+Unpacking libnspr4:amd64 (2:4.35-1) ...
+Selecting previously unselected package libnss3:amd64.
+Preparing to unpack .../121-libnss3_2%3a3.87.1-1+deb12u1_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.87.1-1+deb12u1) ...
+Selecting previously unselected package libpcsclite1:amd64.
+Preparing to unpack .../122-libpcsclite1_1.9.9-2_amd64.deb ...
+Unpacking libpcsclite1:amd64 (1.9.9-2) ...
+Selecting previously unselected package libpthread-stubs0-dev:amd64.
+Preparing to unpack .../123-libpthread-stubs0-dev_0.4-1_amd64.deb ...
+Unpacking libpthread-stubs0-dev:amd64 (0.4-1) ...
+Selecting previously unselected package librsvg2-2:amd64.
+Preparing to unpack .../124-librsvg2-2_2.54.7+dfsg-1~deb12u1_amd64.deb ...
+Unpacking librsvg2-2:amd64 (2.54.7+dfsg-1~deb12u1) ...
+Selecting previously unselected package librsvg2-common:amd64.
+Preparing to unpack .../125-librsvg2-common_2.54.7+dfsg-1~deb12u1_amd64.deb ...
+Unpacking librsvg2-common:amd64 (2.54.7+dfsg-1~deb12u1) ...
+Selecting previously unselected package libsm-dev:amd64.
+Preparing to unpack .../126-libsm-dev_2%3a1.2.3-1_amd64.deb ...
+Unpacking libsm-dev:amd64 (2:1.2.3-1) ...
+Selecting previously unselected package libxau-dev:amd64.
+Preparing to unpack .../127-libxau-dev_1%3a1.0.9-1_amd64.deb ...
+Unpacking libxau-dev:amd64 (1:1.0.9-1) ...
+Selecting previously unselected package libxdmcp-dev:amd64.
+Preparing to unpack .../128-libxdmcp-dev_1%3a1.1.2-3_amd64.deb ...
+Unpacking libxdmcp-dev:amd64 (1:1.1.2-3) ...
+Selecting previously unselected package xtrans-dev.
+Preparing to unpack .../129-xtrans-dev_1.4.0-1_all.deb ...
+Unpacking xtrans-dev (1.4.0-1) ...
+Selecting previously unselected package libxcb1-dev:amd64.
+Preparing to unpack .../130-libxcb1-dev_1.15-1_amd64.deb ...
+Unpacking libxcb1-dev:amd64 (1.15-1) ...
+Selecting previously unselected package libx11-dev:amd64.
+Preparing to unpack .../131-libx11-dev_2%3a1.8.4-2+deb12u2_amd64.deb ...
+Unpacking libx11-dev:amd64 (2:1.8.4-2+deb12u2) ...
+Selecting previously unselected package libxt-dev:amd64.
+Preparing to unpack .../132-libxt-dev_1%3a1.2.1-1.1_amd64.deb ...
+Unpacking libxt-dev:amd64 (1:1.2.1-1.1) ...
+Selecting previously unselected package openjdk-17-jre-headless:amd64.
+Preparing to unpack .../133-openjdk-17-jre-headless_17.0.14+7-1~deb12u1_amd64.deb ...
+Unpacking openjdk-17-jre-headless:amd64 (17.0.14+7-1~deb12u1) ...
+Selecting previously unselected package openjdk-17-jre:amd64.
+Preparing to unpack .../134-openjdk-17-jre_17.0.14+7-1~deb12u1_amd64.deb ...
+Unpacking openjdk-17-jre:amd64 (17.0.14+7-1~deb12u1) ...
+Selecting previously unselected package openjdk-17-jdk-headless:amd64.
+Preparing to unpack .../135-openjdk-17-jdk-headless_17.0.14+7-1~deb12u1_amd64.deb ...
+Unpacking openjdk-17-jdk-headless:amd64 (17.0.14+7-1~deb12u1) ...
+Selecting previously unselected package openjdk-17-jdk:amd64.
+Preparing to unpack .../136-openjdk-17-jdk_17.0.14+7-1~deb12u1_amd64.deb ...
+Unpacking openjdk-17-jdk:amd64 (17.0.14+7-1~deb12u1) ...
+Setting up libgraphite2-3:amd64 (1.3.14-1) ...
+Setting up liblcms2-2:amd64 (2.14-2) ...
+Setting up libpixman-1-0:amd64 (0.42.2-1) ...
+Setting up libpciaccess0:amd64 (0.17-2) ...
+Setting up libxau6:amd64 (1:1.0.9-1) ...
+Setting up libxdmcp6:amd64 (1:1.1.2-3) ...
+Setting up libxcb1:amd64 (1.15-1) ...
+Setting up libxcb-xfixes0:amd64 (1.15-1) ...
+Setting up liblerc4:amd64 (4.0.0+ds-2) ...
+Setting up hicolor-icon-theme (0.17-2) ...
+Setting up java-common (0.74) ...
+Setting up libdatrie1:amd64 (0.2.13-2+b1) ...
+Setting up libxcb-render0:amd64 (1.15-1) ...
+Setting up libglvnd0:amd64 (1.6.0-1) ...
+Setting up libxcb-glx0:amd64 (1.15-1) ...
+Setting up libgdk-pixbuf2.0-common (2.42.10+dfsg-1+deb12u1) ...
+Setting up libxcb-shape0:amd64 (1.15-1) ...
+Setting up x11-common (1:7.7+23) ...
+Setting up libsensors-config (1:3.6.0-7.1) ...
+Setting up libdeflate0:amd64 (1.14-1) ...
+Setting up libxcb-shm0:amd64 (1.15-1) ...
+Setting up libpthread-stubs0-dev:amd64 (0.4-1) ...
+Setting up libjbig0:amd64 (2.1-6.1) ...
+Setting up libxcb-present0:amd64 (1.15-1) ...
+Setting up libdconf1:amd64 (0.40.0-4) ...
+Setting up libasound2-data (1.2.8-1) ...
+Setting up dbus-user-session (1.14.10-1~deb12u1) ...
+Setting up xtrans-dev (1.4.0-1) ...
+Setting up libfontenc1:amd64 (1:1.1.4-1) ...
+Setting up libz3-4:amd64 (4.8.12-3.1) ...
+Setting up libjpeg62-turbo:amd64 (1:2.1.5-2) ...
+Setting up libx11-data (2:1.8.4-2+deb12u2) ...
+Setting up libnspr4:amd64 (2:4.35-1) ...
+Setting up libxcb-sync1:amd64 (1.15-1) ...
+Setting up libavahi-common-data:amd64 (0.8-10+deb12u1) ...
+Setting up libfribidi0:amd64 (1.0.8-2.1) ...
+Setting up fonts-dejavu-core (2.37-6) ...
+Setting up libpcsclite1:amd64 (1.9.9-2) ...
+Setting up libsensors5:amd64 (1:3.6.0-7.1) ...
+Setting up libglapi-mesa:amd64 (22.3.6-1+deb12u1) ...
+Setting up libwebp7:amd64 (1.2.4-0.2+deb12u1) ...
+Setting up libxcb-dri2-0:amd64 (1.15-1) ...
+Setting up libgif7:amd64 (5.2.1-2.5) ...
+Setting up fonts-dejavu-extra (2.37-6) ...
+Setting up alsa-topology-conf (1.2.5.1-2) ...
+Setting up libxshmfence1:amd64 (1.3-1) ...
+Setting up at-spi2-common (2.46.0-5) ...
+Setting up libtiff6:amd64 (4.5.0-6+deb12u2) ...
+Setting up libxcb-randr0:amd64 (1.15-1) ...
+Setting up libllvm15:amd64 (1:15.0.6-4+b1) ...
+Setting up libasound2:amd64 (1.2.8-1+b1) ...
+Setting up libx11-6:amd64 (2:1.8.4-2+deb12u2) ...
+Setting up libharfbuzz0b:amd64 (6.0.0+dfsg-3) ...
+Setting up libthai-data (0.1.29-1) ...
+Setting up xorg-sgml-doctools (1:1.11-1.1) ...
+Setting up libgdk-pixbuf-2.0-0:amd64 (2.42.10+dfsg-1+deb12u1) ...
+Setting up libgtk2.0-common (2.24.33-2+deb12u1) ...
+Setting up libatk1.0-0:amd64 (2.46.0-5) ...
+Setting up libxkbfile1:amd64 (1:1.1.0-1) ...
+Setting up ca-certificates-java (20230710~deb12u1) ...
+No JRE found. Skipping Java certificates setup.
+Setting up libdrm-common (2.4.114-1) ...
+Setting up libxcomposite1:amd64 (1:0.4.5-1) ...
+Setting up libxmuu1:amd64 (2:1.1.3-3) ...
+Setting up libxcb-dri3-0:amd64 (1.15-1) ...
+Setting up gtk-update-icon-cache (3.24.38-2~deb12u3) ...
+Setting up libx11-xcb1:amd64 (2:1.8.4-2+deb12u2) ...
+Setting up libice6:amd64 (2:1.0.10-1) ...
+Setting up libxdamage1:amd64 (1:1.1.6-1) ...
+Setting up libxpm4:amd64 (1:3.5.12-1.1+deb12u1) ...
+Setting up libxrender1:amd64 (1:0.9.10-1.1) ...
+Setting up alsa-ucm-conf (1.2.8-1) ...
+Setting up fontconfig-config (2.14.1-4) ...
+Setting up libavahi-common3:amd64 (0.8-10+deb12u1) ...
+Setting up libxext6:amd64 (2:1.3.4-1+b1) ...
+Setting up dconf-service (0.40.0-4) ...
+Setting up libnss3:amd64 (2:3.87.1-1+deb12u1) ...
+Setting up libxxf86vm1:amd64 (1:1.1.4-1+b2) ...
+Setting up libthai0:amd64 (0.1.29-1) ...
+Setting up adwaita-icon-theme (43-1) ...
+update-alternatives: using /usr/share/icons/Adwaita/cursor.theme to provide /usr/share/icons/default/index.theme (x-cursor-theme) in auto mode
+Setting up libxfixes3:amd64 (1:6.0.0-2) ...
+Setting up libxinerama1:amd64 (2:1.1.4-3) ...
+Setting up libxv1:amd64 (2:1.0.11-1.1) ...
+Setting up libxrandr2:amd64 (2:1.5.2-2+b1) ...
+Setting up libdrm2:amd64 (2.4.114-1+b1) ...
+Setting up libgdk-pixbuf2.0-bin (2.42.10+dfsg-1+deb12u1) ...
+Setting up libsm6:amd64 (2:1.2.3-1) ...
+Setting up libavahi-client3:amd64 (0.8-10+deb12u1) ...
+Setting up libdrm-amdgpu1:amd64 (2.4.114-1+b1) ...
+Setting up libdrm-nouveau2:amd64 (2.4.114-1+b1) ...
+Setting up libxi6:amd64 (2:1.8-1+b1) ...
+Setting up dconf-gsettings-backend:amd64 (0.40.0-4) ...
+Setting up libdrm-radeon1:amd64 (2.4.114-1+b1) ...
+Setting up libxtst6:amd64 (2:1.2.3-1.1) ...
+Setting up libxcursor1:amd64 (1:1.2.1-1) ...
+Setting up libdrm-intel1:amd64 (2.4.114-1+b1) ...
+Setting up libgl1-mesa-dri:amd64 (22.3.6-1+deb12u1) ...
+Setting up libxxf86dga1:amd64 (2:1.1.5-1) ...
+Setting up libatspi2.0-0:amd64 (2.46.0-5) ...
+Setting up libatk-bridge2.0-0:amd64 (2.46.0-5) ...
+Setting up libxt6:amd64 (1:1.2.1-1.1) ...
+Setting up libcups2:amd64 (2.4.2-3+deb12u8) ...
+Setting up gsettings-desktop-schemas (43.0-1) ...
+Setting up libxmu6:amd64 (2:1.1.3-3) ...
+Setting up libglx-mesa0:amd64 (22.3.6-1+deb12u1) ...
+Setting up libglx0:amd64 (1.6.0-1) ...
+Setting up libxaw7:amd64 (2:1.0.14-1) ...
+Setting up libgl1:amd64 (1.6.0-1) ...
+Processing triggers for sgml-base (1.31) ...
+Setting up libfontconfig1:amd64 (2.14.1-4) ...
+Setting up x11proto-dev (2022.1-1) ...
+Setting up fontconfig (2.14.1-4) ...
+Regenerating fonts cache... done.
+Setting up libxft2:amd64 (2.3.6-1) ...
+Setting up libxau-dev:amd64 (1:1.0.9-1) ...
+Setting up libice-dev:amd64 (2:1.0.10-1) ...
+Setting up libsm-dev:amd64 (2:1.2.3-1) ...
+Processing triggers for libglib2.0-0:amd64 (2.74.6-2+deb12u5) ...
+Processing triggers for libc-bin (2.36-9+deb12u9) ...
+Setting up libpango-1.0-0:amd64 (1.50.12+ds-1) ...
+Processing triggers for man-db (2.11.2-2) ...
+Setting up libcairo2:amd64 (1.16.0-7) ...
+Setting up libxdmcp-dev:amd64 (1:1.1.2-3) ...
+Setting up openjdk-17-jre-headless:amd64 (17.0.14+7-1~deb12u1) ...
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jpackage to provide /usr/bin/jpackage (jpackage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+Setting up at-spi2-core (2.46.0-5) ...
+Setting up x11-utils (7.7+5) ...
+Setting up libcairo-gobject2:amd64 (1.16.0-7) ...
+Setting up libatk-wrapper-java (0.40.0-3) ...
+Setting up libpangoft2-1.0-0:amd64 (1.50.12+ds-1) ...
+Setting up libpangocairo-1.0-0:amd64 (1.50.12+ds-1) ...
+Setting up libxcb1-dev:amd64 (1.15-1) ...
+Setting up libgtk2.0-0:amd64 (2.24.33-2+deb12u1) ...
+Setting up libx11-dev:amd64 (2:1.8.4-2+deb12u2) ...
+Setting up libatk-wrapper-java-jni:amd64 (0.40.0-3) ...
+Setting up librsvg2-2:amd64 (2.54.7+dfsg-1~deb12u1) ...
+Setting up libxt-dev:amd64 (1:1.2.1-1.1) ...
+Setting up librsvg2-common:amd64 (2.54.7+dfsg-1~deb12u1) ...
+Setting up libgail18:amd64 (2.24.33-2+deb12u1) ...
+Setting up libgtk2.0-bin (2.24.33-2+deb12u1) ...
+Setting up libgail-common:amd64 (2.24.33-2+deb12u1) ...
+Processing triggers for ca-certificates-java (20230710~deb12u1) ...
+Adding debian:ACCVRAIZ1.pem
+Adding debian:AC_RAIZ_FNMT-RCM.pem
+Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+Adding debian:ANF_Secure_Server_Root_CA.pem
+Adding debian:Actalis_Authentication_Root_CA.pem
+Adding debian:AffirmTrust_Commercial.pem
+Adding debian:AffirmTrust_Networking.pem
+Adding debian:AffirmTrust_Premium.pem
+Adding debian:AffirmTrust_Premium_ECC.pem
+Adding debian:Amazon_Root_CA_1.pem
+Adding debian:Amazon_Root_CA_2.pem
+Adding debian:Amazon_Root_CA_3.pem
+Adding debian:Amazon_Root_CA_4.pem
+Adding debian:Atos_TrustedRoot_2011.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068_2.pem
+Adding debian:Baltimore_CyberTrust_Root.pem
+Adding debian:Buypass_Class_2_Root_CA.pem
+Adding debian:Buypass_Class_3_Root_CA.pem
+Adding debian:CA_Disig_Root_R2.pem
+Adding debian:CFCA_EV_ROOT.pem
+Adding debian:COMODO_Certification_Authority.pem
+Adding debian:COMODO_ECC_Certification_Authority.pem
+Adding debian:COMODO_RSA_Certification_Authority.pem
+Adding debian:Certainly_Root_E1.pem
+Adding debian:Certainly_Root_R1.pem
+Adding debian:Certigna.pem
+Adding debian:Certigna_Root_CA.pem
+Adding debian:Certum_EC-384_CA.pem
+Adding debian:Certum_Trusted_Network_CA.pem
+Adding debian:Certum_Trusted_Network_CA_2.pem
+Adding debian:Certum_Trusted_Root_CA.pem
+Adding debian:Comodo_AAA_Services_root.pem
+Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+Adding debian:DigiCert_Global_Root_CA.pem
+Adding debian:DigiCert_Global_Root_G2.pem
+Adding debian:DigiCert_Global_Root_G3.pem
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+Adding debian:DigiCert_Trusted_Root_G4.pem
+Adding debian:E-Tugra_Certification_Authority.pem
+Adding debian:E-Tugra_Global_Root_CA_ECC_v3.pem
+Adding debian:E-Tugra_Global_Root_CA_RSA_v3.pem
+Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+Adding debian:Entrust_Root_Certification_Authority.pem
+Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G4.pem
+Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+Adding debian:GLOBALTRUST_2020.pem
+Adding debian:GTS_Root_R1.pem
+Adding debian:GTS_Root_R2.pem
+Adding debian:GTS_Root_R3.pem
+Adding debian:GTS_Root_R4.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+Adding debian:GlobalSign_Root_CA.pem
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+Adding debian:GlobalSign_Root_CA_-_R6.pem
+Adding debian:GlobalSign_Root_E46.pem
+Adding debian:GlobalSign_Root_R46.pem
+Adding debian:Go_Daddy_Class_2_CA.pem
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+Adding debian:HiPKI_Root_CA_-_G1.pem
+Adding debian:Hongkong_Post_Root_CA_1.pem
+Adding debian:Hongkong_Post_Root_CA_3.pem
+Adding debian:ISRG_Root_X1.pem
+Adding debian:ISRG_Root_X2.pem
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+Adding debian:Izenpe.com.pem
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+Adding debian:NAVER_Global_Root_Certification_Authority.pem
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+Adding debian:QuoVadis_Root_CA_2.pem
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+Adding debian:QuoVadis_Root_CA_3.pem
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+Adding debian:SZAFIR_ROOT_CA2.pem
+Adding debian:SecureSign_RootCA11.pem
+Adding debian:SecureTrust_CA.pem
+Adding debian:Secure_Global_CA.pem
+Adding debian:Security_Communication_ECC_RootCA1.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:Security_Communication_RootCA3.pem
+Adding debian:Security_Communication_Root_CA.pem
+Adding debian:Starfield_Class_2_CA.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+Adding debian:SwissSign_Silver_CA_-_G2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:TeliaSonera_Root_CA_v1.pem
+Adding debian:Telia_Root_CA_v2.pem
+Adding debian:TrustCor_ECA-1.pem
+Adding debian:TrustCor_RootCert_CA-1.pem
+Adding debian:TrustCor_RootCert_CA-2.pem
+Adding debian:Trustwave_Global_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+Adding debian:TunTrust_Root_CA.pem
+Adding debian:UCA_Extended_Validation_Root.pem
+Adding debian:UCA_Global_G2_Root.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+Adding debian:XRamp_Global_CA_Root.pem
+Adding debian:certSIGN_ROOT_CA.pem
+Adding debian:certSIGN_Root_CA_G2.pem
+Adding debian:e-Szigno_Root_CA_2017.pem
+Adding debian:ePKI_Root_Certification_Authority.pem
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+Adding debian:emSign_ECC_Root_CA_-_G3.pem
+Adding debian:emSign_Root_CA_-_C1.pem
+Adding debian:emSign_Root_CA_-_G1.pem
+Adding debian:vTrus_ECC_Root_CA.pem
+Adding debian:vTrus_Root_CA.pem
+done.
+Setting up openjdk-17-jdk-headless:amd64 (17.0.14+7-1~deb12u1) ...
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jar to provide /usr/bin/jar (jar) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/javac to provide /usr/bin/javac (javac) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/javap to provide /usr/bin/javap (javap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jdeprscan to provide /usr/bin/jdeprscan (jdeprscan) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jfr to provide /usr/bin/jfr (jfr) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jimage to provide /usr/bin/jimage (jimage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jlink to provide /usr/bin/jlink (jlink) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jmod to provide /usr/bin/jmod (jmod) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jps to provide /usr/bin/jps (jps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jshell to provide /usr/bin/jshell (jshell) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jhsdb to provide /usr/bin/jhsdb (jhsdb) in auto mode
+Setting up openjdk-17-jre:amd64 (17.0.14+7-1~deb12u1) ...
+Setting up openjdk-17-jdk:amd64 (17.0.14+7-1~deb12u1) ...
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+Processing triggers for libc-bin (2.36-9+deb12u9) ...
+Processing triggers for libgdk-pixbuf-2.0-0:amd64 (2.42.10+dfsg-1+deb12u1) ...
+paopao_gangpao@de-zoomcamp:~/spark$ java -version
+openjdk version "23.0.2" 2025-01-21
+OpenJDK Runtime Environment Homebrew (build 23.0.2)
+OpenJDK 64-Bit Server VM Homebrew (build 23.0.2, mixed mode, sharing)
+paopao_gangpao@de-zoomcamp:~/spark$ spark-shell --version
+/home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5/libexec/bin/spark-class: line 71: /usr/local/Cellar/openjdk@11/11.0.12/bin/java: No such file or directory
+/home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5/libexec/bin/spark-class: line 97: CMD: bad array subscript
+paopao_gangpao@de-zoomcamp:~/spark$ brew install openjdk@11
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/11/manifests/11.0.26-1
+######################################################################################################### 100.0%
+==> Fetching openjdk@11
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/11/blobs/sha256:16785740fce6f5b7b0a95229ba0b0a1c03f8662
+######################################################################################################### 100.0%
+==> Pouring openjdk@11--11.0.26.x86_64_linux.bottle.1.tar.gz
+sudo ln -sfn /home/linuxbrew/.linuxbrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+==> Caveats
+openjdk@11 is keg-only, which means it was not symlinked into /home/linuxbrew/.linuxbrew,
+because this is an alternate version of another formula.
+
+If you need to have openjdk@11 first in your PATH, run:
+  echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/openjdk@11/bin:$PATH"' >> ~/.profile
+
+For compilers to find openjdk@11 you may need to set:
+  export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/openjdk@11/include"
+==> Summary
+🍺  /home/linuxbrew/.linuxbrew/Cellar/openjdk@11/11.0.26: 667 files, 307.6MB
+==> Running `brew cleanup openjdk@11`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+paopao_gangpao@de-zoomcamp:~/spark$ sudo ln -sfn /home/linuxbrew/.linuxbrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+ln: failed to create symbolic link '/Library/Java/JavaVirtualMachines/openjdk-11.jdk': No such file or directory
+paopao_gangpao@de-zoomcamp:~/spark$ sudo ln -sfn /home/linuxbrew/.linuxbrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+ln: failed to create symbolic link '/Library/Java/JavaVirtualMachines/openjdk-11.jdk': No such file or directory
+paopao_gangpao@de-zoomcamp:~/spark$ sudo mkdir -p /usr/lib/jvm
+paopao_gangpao@de-zoomcamp:~/spark$ sudo ln -sfn /home/linuxbrew/.linuxbrew/opt/openjdk@11 /usr/lib/jvm/openjdk-11
+paopao_gangpao@de-zoomcamp:~/spark$ export JAVA_HOME="/usr/lib/jvm/openjdk-11"
+export PATH="$JAVA_HOME/bin:$PATH"
+paopao_gangpao@de-zoomcamp:~/spark$ echo 'export JAVA_HOME="/usr/lib/jvm/openjdk-11"' >> ~/.bashrc
+echo 'export PATH="$JAVA_HOME/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+paopao_gangpao@de-zoomcamp:~/spark$ ls -l /usr/lib/jvm/openjdk-11
+lrwxrwxrwx 1 root root 41 Mar  2 16:13 /usr/lib/jvm/openjdk-11 -> /home/linuxbrew/.linuxbrew/opt/openjdk@11
+paopao_gangpao@de-zoomcamp:~/spark$ java -version
+openjdk version "11.0.26" 2025-01-21
+OpenJDK Runtime Environment Homebrew (build 11.0.26+0)
+OpenJDK 64-Bit Server VM Homebrew (build 11.0.26+0, mixed mode)
+paopao_gangpao@de-zoomcamp:~/spark$ spark-shell --version
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.5.5
+      /_/
+                        
+Using Scala version 2.12.18, OpenJDK 64-Bit Server VM, 11.0.26
+Branch HEAD
+Compiled by user ubuntu on 2025-02-23T20:30:46Z
+Revision 7c29c664cdc9321205a98a14858aaf8daaa19db2
+Url https://github.com/apache/spark
+Type --help for more information.
+paopao_gangpao@de-zoomcamp:~/spark$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-10.parquet
+--2025-03-02 16:36:02--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-10.parquet
+Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 54.230.209.200, 54.230.209.126, 54.230.209.72, ...
+Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|54.230.209.200|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 64346071 (61M) [binary/octet-stream]
+Saving to: ‘yellow_tripdata_2024-10.parquet’
+
+yellow_tripdata_2024-10.par 100%[===========================================>]  61.36M  77.8MB/s    in 0.8s    
+
+2025-03-02 16:36:03 (77.8 MB/s) - ‘yellow_tripdata_2024-10.parquet’ saved [64346071/64346071]
+
+paopao_gangpao@de-zoomcamp:~/spark$ val df = spark.read.parquet("yellow_tripdata_2024-10.parquet")
+df.printSchema()
+df.show(5)
+-bash: syntax error near unexpected token `('
+-bash: syntax error near unexpected token `df.show'
+paopao_gangpao@de-zoomcamp:~/spark$ spark-shell
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/03/02 16:37:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Spark context Web UI available at http://de-zoomcamp.us-central1-a.c.skilled-tiger-450623-n7.internal:4040
+Spark context available as 'sc' (master = local[*], app id = local-1740933455881).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.5.5
+      /_/
+         
+Using Scala version 2.12.18 (OpenJDK 64-Bit Server VM, Java 11.0.26)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> val df = spark.read.parquet("yellow_tripdata_2024-10.parquet")
+df: org.apache.spark.sql.DataFrame = [VendorID: int, tpep_pickup_datetime: timestamp_ntz ... 17 more fields]
+
+scala> df.printSchema()
+root
+ |-- VendorID: integer (nullable = true)
+ |-- tpep_pickup_datetime: timestamp_ntz (nullable = true)
+ |-- tpep_dropoff_datetime: timestamp_ntz (nullable = true)
+ |-- passenger_count: long (nullable = true)
+ |-- trip_distance: double (nullable = true)
+ |-- RatecodeID: long (nullable = true)
+ |-- store_and_fwd_flag: string (nullable = true)
+ |-- PULocationID: integer (nullable = true)
+ |-- DOLocationID: integer (nullable = true)
+ |-- payment_type: long (nullable = true)
+ |-- fare_amount: double (nullable = true)
+ |-- extra: double (nullable = true)
+ |-- mta_tax: double (nullable = true)
+ |-- tip_amount: double (nullable = true)
+ |-- tolls_amount: double (nullable = true)
+ |-- improvement_surcharge: double (nullable = true)
+ |-- total_amount: double (nullable = true)
+ |-- congestion_surcharge: double (nullable = true)
+ |-- Airport_fee: double (nullable = true)
+
+
+scala> df.show(5)val df = spark.read.parquet("yellow_tripdata_2024-10.parquet")
+<console>:1: error: ';' expected but 'val' found.
+       df.show(5)val df = spark.read.parquet("yellow_tripdata_2024-10.parquet")
+                 ^
+
+scala> df.printSchema()
+root
+ |-- VendorID: integer (nullable = true)
+ |-- tpep_pickup_datetime: timestamp_ntz (nullable = true)
+ |-- tpep_dropoff_datetime: timestamp_ntz (nullable = true)
+ |-- passenger_count: long (nullable = true)
+ |-- trip_distance: double (nullable = true)
+ |-- RatecodeID: long (nullable = true)
+ |-- store_and_fwd_flag: string (nullable = true)
+ |-- PULocationID: integer (nullable = true)
+ |-- DOLocationID: integer (nullable = true)
+ |-- payment_type: long (nullable = true)
+ |-- fare_amount: double (nullable = true)
+ |-- extra: double (nullable = true)
+ |-- mta_tax: double (nullable = true)
+ |-- tip_amount: double (nullable = true)
+ |-- tolls_amount: double (nullable = true)
+ |-- improvement_surcharge: double (nullable = true)
+ |-- total_amount: double (nullable = true)
+ |-- congestion_surcharge: double (nullable = true)
+ |-- Airport_fee: double (nullable = true)
+
+
+scala> df.show(5)
++--------+--------------------+---------------------+---------------+-------------+----------+------------------+------------+------------+------------+-----------+-----+-------+----------+------------+---------------------+------------+--------------------+-----------+
+|VendorID|tpep_pickup_datetime|tpep_dropoff_datetime|passenger_count|trip_distance|RatecodeID|store_and_fwd_flag|PULocationID|DOLocationID|payment_type|fare_amount|extra|mta_tax|tip_amount|tolls_amount|improvement_surcharge|total_amount|congestion_surcharge|Airport_fee|
++--------+--------------------+---------------------+---------------+-------------+----------+------------------+------------+------------+------------+-----------+-----+-------+----------+------------+---------------------+------------+--------------------+-----------+
+|       2| 2024-10-01 00:30:44|  2024-10-01 00:48:26|              1|          3.0|         1|                 N|         162|         246|           1|       18.4|  1.0|    0.5|       1.5|         0.0|                  1.0|        24.9|                 2.5|        0.0|
+|       1| 2024-10-01 00:12:20|  2024-10-01 00:25:25|              1|          2.2|         1|                 N|          48|         236|           1|       14.2|  3.5|    0.5|       3.8|         0.0|                  1.0|        23.0|                 2.5|        0.0|
+|       1| 2024-10-01 00:04:46|  2024-10-01 00:13:52|              1|          2.7|         1|                 N|         142|          24|           1|       13.5|  3.5|    0.5|       3.7|         0.0|                  1.0|        22.2|                 2.5|        0.0|
+|       1| 2024-10-01 00:12:10|  2024-10-01 00:23:01|              1|          3.1|         1|                 N|         233|          75|           1|       14.2|  3.5|    0.5|       2.0|         0.0|                  1.0|        21.2|                 2.5|        0.0|
+|       1| 2024-10-01 00:30:22|  2024-10-01 00:30:39|              1|          0.0|         1|                 N|         262|         262|           3|        3.0|  3.5|    0.5|       0.0|         0.0|                  1.0|         8.0|                 2.5|        0.0|
++--------+--------------------+---------------------+---------------+-------------+----------+------------------+------------+------------+------------+-----------+-----+-------+----------+------------+---------------------+------------+--------------------+-----------+
+only showing top 5 rows
+
+
+scala> val df = spark.read.parquet("yellow_tripdata_2024-10.parquet")
+df: org.apache.spark.sql.DataFrame = [VendorID: int, tpep_pickup_datetime: timestamp_ntz ... 17 more fields]
+
+scala> df.printSchema()
+root
+ |-- VendorID: integer (nullable = true)
+ |-- tpep_pickup_datetime: timestamp_ntz (nullable = true)
+ |-- tpep_dropoff_datetime: timestamp_ntz (nullable = true)
+ |-- passenger_count: long (nullable = true)
+ |-- trip_distance: double (nullable = true)
+ |-- RatecodeID: long (nullable = true)
+ |-- store_and_fwd_flag: string (nullable = true)
+ |-- PULocationID: integer (nullable = true)
+ |-- DOLocationID: integer (nullable = true)
+ |-- payment_type: long (nullable = true)
+ |-- fare_amount: double (nullable = true)
+ |-- extra: double (nullable = true)
+ |-- mta_tax: double (nullable = true)
+ |-- tip_amount: double (nullable = true)
+ |-- tolls_amount: double (nullable = true)
+ |-- improvement_surcharge: double (nullable = true)
+ |-- total_amount: double (nullable = true)
+ |-- congestion_surcharge: double (nullable = true)
+ |-- Airport_fee: double (nullable = true)
+
+
+scala> df.show(5)
++--------+--------------------+---------------------+---------------+-------------+----------+------------------+------------+------------+------------+-----------+-----+-------+----------+------------+---------------------+------------+--------------------+-----------+
+|VendorID|tpep_pickup_datetime|tpep_dropoff_datetime|passenger_count|trip_distance|RatecodeID|store_and_fwd_flag|PULocationID|DOLocationID|payment_type|fare_amount|extra|mta_tax|tip_amount|tolls_amount|improvement_surcharge|total_amount|congestion_surcharge|Airport_fee|
++--------+--------------------+---------------------+---------------+-------------+----------+------------------+------------+------------+------------+-----------+-----+-------+----------+------------+---------------------+------------+--------------------+-----------+
+|       2| 2024-10-01 00:30:44|  2024-10-01 00:48:26|              1|          3.0|         1|                 N|         162|         246|           1|       18.4|  1.0|    0.5|       1.5|         0.0|                  1.0|        24.9|                 2.5|        0.0|
+|       1| 2024-10-01 00:12:20|  2024-10-01 00:25:25|              1|          2.2|         1|                 N|          48|         236|           1|       14.2|  3.5|    0.5|       3.8|         0.0|                  1.0|        23.0|                 2.5|        0.0|
+|       1| 2024-10-01 00:04:46|  2024-10-01 00:13:52|              1|          2.7|         1|                 N|         142|          24|           1|       13.5|  3.5|    0.5|       3.7|         0.0|                  1.0|        22.2|                 2.5|        0.0|
+|       1| 2024-10-01 00:12:10|  2024-10-01 00:23:01|              1|          3.1|         1|                 N|         233|          75|           1|       14.2|  3.5|    0.5|       2.0|         0.0|                  1.0|        21.2|                 2.5|        0.0|
+|       1| 2024-10-01 00:30:22|  2024-10-01 00:30:39|              1|          0.0|         1|                 N|         262|         262|           3|        3.0|  3.5|    0.5|       0.0|         0.0|                  1.0|         8.0|                 2.5|        0.0|
++--------+--------------------+---------------------+---------------+-------------+----------+------------------+------------+------------+------------+-----------+-----+-------+----------+------------+---------------------+------------+--------------------+-----------+
+only showing top 5 rows
+
+
+scala> val df_repartitioned = df.repartition(4)
+df_repartitioned: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [VendorID: int, tpep_pickup_datetime: timestamp_ntz ... 17 more fields]
+
+scala> df_repartitioned.write.parquet("output_path")
+                                                                                
+scala> ls -lh output_path/*.parquet
+     | Total Size of all Parquet files (in MB) / Number of Partitions (4)
+     | 
+     | 
+You typed two blank lines.  Starting a new command.
+
+scala> val df_repartitioned = df.repartition(4)
+df_repartitioned: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [VendorID: int, tpep_pickup_datetime: timestamp_ntz ... 17 more fields]
+
+scala> df_repartitioned.write.parquet("output_path")
+org.apache.spark.sql.AnalysisException: [PATH_ALREADY_EXISTS] Path file:/home/paopao_gangpao/spark/output_path already exists. Set mode as "overwrite" to overwrite the existing path.
+  at org.apache.spark.sql.errors.QueryCompilationErrors$.outputPathAlreadyExistsError(QueryCompilationErrors.scala:1665)
+  at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:123)
+  at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
+  at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
+  at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
+  at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$executeCollect$1(AdaptiveSparkPlanExec.scala:392)
+  at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.withFinalPlanUpdate(AdaptiveSparkPlanExec.scala:420)
+  at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.executeCollect(AdaptiveSparkPlanExec.scala:392)
+  at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+  at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+  at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+  at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+  at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+  at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+  at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+  at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+  at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+  at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+  at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+  at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+  at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+  at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+  at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+  at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+  at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:869)
+  at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:391)
+  at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:364)
+  at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:243)
+  at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:802)
+  ... 47 elided
+
+scala> ls -lh output_path/*.parquet
+     | :q
+     | 
+     | 
+You typed two blank lines.  Starting a new command.
+
+scala> ls -lh output_path/*.parquet
+     | ls -lh output_path/*.parquet
+     | 
+     | 
+You typed two blank lines.  Starting a new command.
+
+scala> val oct15Trips = df.filter(to_date($"tpep_pickup_datetime") === "2024-10-15")
+oct15Trips: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] = [VendorID: int, tpep_pickup_datetime: timestamp_ntz ... 17 more fields]
+
+scala> val count = oct15Trips.count()
+count: Long = 128893                                                            
+
+scala> val maxHours = df
+maxHours: org.apache.spark.sql.DataFrame = [VendorID: int, tpep_pickup_datetime: timestamp_ntz ... 17 more fields]
+
+scala>   .withColumn("duration_hours", 
+     |     (unix_timestamp($"tpep_dropoff_datetime") - unix_timestamp($"tpep_pickup_datetime")) / 3600
+     |   )
+res7: org.apache.spark.sql.DataFrame = [VendorID: int, tpep_pickup_datetime: timestamp_ntz ... 18 more fields]
+
+scala>   .agg(max("duration_hours").as("max_hours"))
+res8: org.apache.spark.sql.DataFrame = [max_hours: double]
+
+scala>   .collect()(0)(0).asInstanceOf[Double]
+res9: Double = 162.61777777777777                                               
+
+scala> val zonesDF = spark.read
+zonesDF: org.apache.spark.sql.DataFrameReader = org.apache.spark.sql.DataFrameReader@16c4dc4f
+
+scala>   .option("header", "true")
+res10: org.apache.spark.sql.DataFrameReader = org.apache.spark.sql.DataFrameReader@16c4dc4f
+
+scala>   .csv("taxi_zone_lookup.csv")
+org.apache.spark.sql.AnalysisException: [PATH_NOT_FOUND] Path does not exist: file:/home/paopao_gangpao/spark/taxi_zone_lookup.csv.
+  at org.apache.spark.sql.errors.QueryCompilationErrors$.dataPathNotExistError(QueryCompilationErrors.scala:1499)
+  at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$4(DataSource.scala:757)
+  at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$4$adapted(DataSource.scala:754)
+  at org.apache.spark.util.ThreadUtils$.$anonfun$parmap$2(ThreadUtils.scala:384)
+  at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+  at scala.util.Success.$anonfun$map$1(Try.scala:255)
+  at scala.util.Success.map(Try.scala:213)
+  at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+  at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+  at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+  at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+  at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1426)
+  at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+  at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+  at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+  at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+  at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+scala> zonesDF.createOrReplaceTempView("zones")
+<console>:24: error: value createOrReplaceTempView is not a member of org.apache.spark.sql.DataFrameReader
+       zonesDF.createOrReplaceTempView("zones")
+               ^
+
+scala> wget https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv
+     | 
+[1]+  Stopped                 spark-shell
+paopao_gangpao@de-zoomcamp:~/spark$ wget https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv
+--2025-03-02 17:02:28--  https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv
+Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 54.230.209.72, 54.230.209.200, 54.230.209.126, ...
+Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|54.230.209.72|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 12331 (12K) [text/csv]
+Saving to: ‘taxi_zone_lookup.csv’
+
+taxi_zone_lookup.csv        100%[===========================================>]  12.04K  --.-KB/s    in 0s      
+
+2025-03-02 17:02:28 (167 MB/s) - ‘taxi_zone_lookup.csv’ saved [12331/12331]
+
+paopao_gangpao@de-zoomcamp:~/spark$ spark shell
+-bash: spark: command not found
+paopao_gangpao@de-zoomcamp:~/spark$ spark-shell
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+25/03/02 17:02:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/03/02 17:02:51 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+Spark context Web UI available at http://de-zoomcamp.us-central1-a.c.skilled-tiger-450623-n7.internal:4041
+Spark context available as 'sc' (master = local[*], app id = local-1740934971766).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.5.5
+      /_/
+         
+Using Scala version 2.12.18 (OpenJDK 64-Bit Server VM, Java 11.0.26)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> val zonesDF = spark.read.option("header", "true").csv("taxi_zone_lookup.csv")
+zonesDF: org.apache.spark.sql.DataFrame = [LocationID: string, Borough: string ... 2 more fields]
+
+scala> zonesDF.createOrReplaceTempView("zones")
+
+scala> spark.sql("SELECT * FROM zones LIMIT 5").show()
++----------+-------------+--------------------+------------+
+|LocationID|      Borough|                Zone|service_zone|
++----------+-------------+--------------------+------------+
+|         1|          EWR|      Newark Airport|         EWR|
+|         2|       Queens|         Jamaica Bay|   Boro Zone|
+|         3|        Bronx|Allerton/Pelham G...|   Boro Zone|
+|         4|    Manhattan|       Alphabet City| Yellow Zone|
+|         5|Staten Island|       Arden Heights|   Boro Zone|
++----------+-------------+--------------------+------------+
+
+
+scala> val result = spark.sql("""
+     |   SELECT 
+     |     z.Zone AS pickup_zone,
+     |     COUNT(*) AS trip_count
+     |   FROM trips t
+     |   JOIN zones z ON t.PULocationID = z.LocationID
+     |   GROUP BY z.Zone
+     |   ORDER BY trip_count ASC
+     |   LIMIT 1
+     | """)
+25/03/02 17:05:51 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+25/03/02 17:05:51 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+25/03/02 17:05:58 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 2.3.0
+25/03/02 17:05:58 WARN ObjectStore: setMetaStoreSchemaVersion called but recording version is disabled: version = 2.3.0, comment = Set by MetaStore paopao_gangpao@10.128.0.2
+25/03/02 17:05:58 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
+org.apache.spark.sql.catalyst.ExtendedAnalysisException: [TABLE_OR_VIEW_NOT_FOUND] The table or view `trips` cannot be found. Verify the spelling and correctness of the schema and catalog.
+If you did not qualify the name with a schema, verify the current_schema() output, or qualify the name with the correct schema and catalog.
+To tolerate the error on drop use DROP VIEW IF EXISTS or DROP TABLE IF EXISTS.; line 5 pos 7;
+'GlobalLimit 1
++- 'LocalLimit 1
+   +- 'Sort ['trip_count ASC NULLS FIRST], true
+      +- 'Aggregate ['z.Zone], ['z.Zone AS pickup_zone#50, count(1) AS trip_count#51L]
+         +- 'Join Inner, ('t.PULocationID = 'z.LocationID)
+            :- 'SubqueryAlias t
+            :  +- 'UnresolvedRelation [trips], [], false
+            +- SubqueryAlias z
+               +- SubqueryAlias zones
+                  +- View (`zones`, [LocationID#17,Borough#18,Zone#19,service_zone#20])
+                     +- Relation [LocationID#17,Borough#18,Zone#19,service_zone#20] csv
+
+  at org.apache.spark.sql.catalyst.analysis.package$AnalysisErrorAt.tableNotFound(package.scala:87)
+  at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$2(CheckAnalysis.scala:235)
+  at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.$anonfun$checkAnalysis0$2$adapted(CheckAnalysis.scala:215)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:244)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1$adapted(TreeNode.scala:243)
+  at scala.collection.Iterator.foreach(Iterator.scala:943)
+  at scala.collection.Iterator.foreach$(Iterator.scala:943)
+  at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+  at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+  at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+  at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1$adapted(TreeNode.scala:243)
+  at scala.collection.Iterator.foreach(Iterator.scala:943)
+  at scala.collection.Iterator.foreach$(Iterator.scala:943)
+  at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+  at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+  at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+  at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1$adapted(TreeNode.scala:243)
+  at scala.collection.Iterator.foreach(Iterator.scala:943)
+  at scala.collection.Iterator.foreach$(Iterator.scala:943)
+  at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+  at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+  at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+  at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1$adapted(TreeNode.scala:243)
+  at scala.collection.Iterator.foreach(Iterator.scala:943)
+  at scala.collection.Iterator.foreach$(Iterator.scala:943)
+  at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+  at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+  at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+  at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1$adapted(TreeNode.scala:243)
+  at scala.collection.Iterator.foreach(Iterator.scala:943)
+  at scala.collection.Iterator.foreach$(Iterator.scala:943)
+  at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+  at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+  at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+  at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$foreachUp$1$adapted(TreeNode.scala:243)
+  at scala.collection.Iterator.foreach(Iterator.scala:943)
+  at scala.collection.Iterator.foreach$(Iterator.scala:943)
+  at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+  at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+  at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+  at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+  at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:243)
+  at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis0(CheckAnalysis.scala:215)
+  at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis0$(CheckAnalysis.scala:197)
+  at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis0(Analyzer.scala:202)
+  at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis(CheckAnalysis.scala:193)
+  at org.apache.spark.sql.catalyst.analysis.CheckAnalysis.checkAnalysis$(CheckAnalysis.scala:171)
+  at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis(Analyzer.scala:202)
+  at org.apache.spark.sql.catalyst.analysis.Analyzer.$anonfun$executeAndCheck$1(Analyzer.scala:225)
+  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:330)
+  at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:222)
+  at org.apache.spark.sql.execution.QueryExecution.$anonfun$analyzed$1(QueryExecution.scala:77)
+  at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:138)
+  at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$2(QueryExecution.scala:219)
+  at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:546)
+  at org.apache.spark.sql.execution.QueryExecution.$anonfun$executePhase$1(QueryExecution.scala:219)
+  at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+  at org.apache.spark.sql.execution.QueryExecution.executePhase(QueryExecution.scala:218)
+  at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:77)
+  at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:74)
+  at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:66)
+  at org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:99)
+  at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+  at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:97)
+  at org.apache.spark.sql.SparkSession.$anonfun$sql$4(SparkSession.scala:691)
+  at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+  at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:682)
+  at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:713)
+  at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:744)
+  ... 56 elided
+
+scala> 
+
+scala> result.show()
+<console>:23: error: not found: value result
+       result.show()
+       ^
+
+scala> val tripsDF = spark.read.parquet("yellow_tripdata_2024-10.parquet")
+tripsDF: org.apache.spark.sql.DataFrame = [VendorID: int, tpep_pickup_datetime: timestamp_ntz ... 17 more fields]
+
+scala> tripsDF.createOrReplaceTempView("trips")
+
+scala> val result = spark.sql(""" SELECT z.Zone AS pickup_zone,COUNT(*) AS trip_count FROM trips t JOIN zones z ON t.PULocationID = z.LocationID GROUP BY z.Zone ORDER BY trip_count ASC LIMIT 1""")
+result: org.apache.spark.sql.DataFrame = [pickup_zone: string, trip_count: bigint]
+
+scala> result.show()
++--------------------+----------+                                               
+|         pickup_zone|trip_count|
++--------------------+----------+
+|Governor's Island...|         1|
++--------------------+----------+
+
+
+scala> 
+
+scala> 
+
+scala> 
+
+scala> ^X
+<console>:1: error: illegal character '\u0018'
+       \u0018
+       ^
+
+scala> :q
+paopao_gangpao@de-zoomcamp:~/spark$ history
+    1  htop
+    2  ls
+    3  gcloud --version
+    4  conda --version
+    5  find / -name "anaconda3" 2>/dev/null
+    6  wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
+    7  ls
+    8  mkdir spark
+    9  cd spark/
+   10  xcode-select --install
+   11  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+   12  brew install java
+   13  export JAVA_HOME=/usr/local/Cellar/openjdk@11/11.0.12
+   14  export PATH="$JAVA_HOME/bin/:$PATH"
+   15  import pyspark
+   16  from pyspark.sql import SparkSession
+   17  # Create SparkSession
+   18  spark = SparkSession.builder.master("local[1]") \
+   19  brew install scala@2.13
+   20  pip install scala@2.13
+   21  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   22  brew install scala@2.13
+   23  sudo apt-get update && sudo apt-get install -y git
+   24  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   25  brew install scala@2.13
+   26  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+   27  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc  # If you use Zsh
+   28  source ~/.bashrc  # Restart your shell or run this to apply changes
+   29  brew install scala@2.13
+   30  scala -version
+   31  brew install scala@2.13
+   32  scala -version
+   33  brew install apache-spark
+   34  export SPARK_HOME=/usr/local/Cellar/apache-spark/3.2.1/libexec
+   35  export PATH="$SPARK_HOME/bin/:$PATH"
+   36  spark-shell
+   37  /home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5/libexec
+   38  export SPARK_HOME="/home/linuxbrew/.linuxbrew/Cellar/apache-spark/3.5.5/libexec"
+   39  export PATH="$SPARK_HOME/bin:$PATH"
+   40  spark-shell --version
+   41  sudo apt-get update && sudo apt-get install -y openjdk-11-jdk
+   42  sudo update-alternatives --config java
+   43  sudo apt-get update && sudo apt-get install -y openjdk-17-jdk
+   44  java -version
+   45  spark-shell --version
+   46  brew install openjdk@11
+   47  sudo ln -sfn /home/linuxbrew/.linuxbrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+   48  sudo mkdir -p /usr/lib/jvm
+   49  sudo ln -sfn /home/linuxbrew/.linuxbrew/opt/openjdk@11 /usr/lib/jvm/openjdk-11
+   50  export JAVA_HOME="/usr/lib/jvm/openjdk-11"
+   51  export PATH="$JAVA_HOME/bin:$PATH"
+   52  echo 'export JAVA_HOME="/usr/lib/jvm/openjdk-11"' >> ~/.bashrc
+   53  echo 'export PATH="$JAVA_HOME/bin:$PATH"' >> ~/.bashrc
+   54  source ~/.bashrc
+   55  ls -l /usr/lib/jvm/openjdk-11
+   56  java -version
+   57  spark-shell --version
+   58  wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-10.parquet
+   59  val df = spark.read.parquet("yellow_tripdata_2024-10.parquet")
+   60  df.printSchema() df.show(5)
+   61  spark-shell
+   62  wget https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv
+   63  spark shell
+   64  spark-shell
+   65  history
