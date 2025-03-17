@@ -1,0 +1,73 @@
+# Define the Kafka source configuration
+server = 'localhost:9092'  # Your Kafka server address
+topic = 'green-trips'
+
+# Define the StreamExecutionEnvironment
+env = StreamExecutionEnvironment.get_execution_environment()
+env.set_stream_time_characteristic(TimeCharacteristic.EventTime)
+
+# Define the TableEnvironment
+settings = EnvironmentSettings.in_streaming_mode()
+table_env = StreamTableEnvironment.create(env, environment_settings=settings)
+
+# Set up Kafka source
+table_env.connect(Kafka()
+    .version("universal")
+    .topic(topic)
+    .start_from_earliest()
+    .property("bootstrap.servers", server)
+    .property("group.id", "green-trips-consumer")
+    .json_schema("""
+    {
+        "type": "object",
+        "properties": {
+            "lpep_pickup_datetime": {"type": "string"},
+            "lpep_dropoff_datetime": {"type": "string"},
+            "PULocationID": {"type": "integer"},
+            "DOLocationID": {"type": "integer"},
+            "passenger_count": {"type": "integer"},
+            "trip_distance": {"type": "number"},
+            "tip_amount": {"type": "number"}
+        }
+    }
+    """)
+    .format(Json())
+    .create_temporary_table("green_trips_source"))
+
+# Define the table schema and read data from the Kafka stream
+green_trips_table = table_env.from_path("green_trips_source")
+
+# Convert the string date to timestamp and handle event time
+green_trips_table = green_trips_table \
+    .add_columns(
+        E.to_timestamp(green_trips_table.lpep_pickup_datetime, 'yyyy-MM-dd HH:mm:ss').alias('pickup_time'),
+        E.to_timestamp(green_trips_table.lpep_dropoff_datetime, 'yyyy-MM-dd HH:mm:ss').alias('dropoff_time')
+    )
+
+# Define session window with a gap of 5 minutes, using lpep_dropoff_datetime as the watermark
+table_env.create_temporary_view("green_trips_with_time", green_trips_table)
+table_env.execute_sql("""
+    CREATE TABLE session_window_trips AS
+    SELECT 
+        PULocationID,
+        DOLocationID,
+        COUNT(*) AS trip_count,
+        TUMBLE_START(dropoff_time, INTERVAL '5' MINUTE) AS session_start,
+        TUMBLE_END(dropoff_time, INTERVAL '5' MINUTE) AS session_end
+    FROM green_trips_with_time
+    GROUP BY PULocationID, DOLocationID, SESSION(dropoff_time, INTERVAL '5' MINUTE)
+""")
+
+# Compute the longest unbroken streak
+result = table_env.sql_query("""
+    SELECT 
+        PULocationID, 
+        DOLocationID, 
+        trip_count
+    FROM session_window_trips
+    ORDER BY trip_count DESC
+    LIMIT 1
+""")
+
+# Print out the result
+result.execute().print()
